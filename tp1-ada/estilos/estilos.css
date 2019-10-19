@@ -5,7 +5,8 @@
   height: 60px;
   top: 0;
   z-index: 1;
-  position: fixed; }
+  position: fixed;
+  padding: 10px 0; }
   #header .header-container {
     display: flex;
     flex-direction: row; }
@@ -13,8 +14,7 @@
       width: 70px;
       height: auto;
       left: 0;
-      margin-left: 10px;
-      padding: 15px; }
+      margin-left: 10px; }
     #header .header-container .btn {
       display: flex;
       flex-direction: row;
@@ -127,7 +127,8 @@
     font-size: 16px;
     line-height: 20px;
     text-align: center;
-    padding: 0px 0px 50px; }
+    padding: 0px 0px 50px;
+    color: #444; }
   #about-us .gente img {
     width: 360px;
     height: 250px;
@@ -136,7 +137,8 @@
     text-align: left;
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
-    line-height: 24px; }
+    line-height: 24px;
+    color: #444; }
   #about-us .icono {
     border-radius: 50%;
     height: 55px;
@@ -154,12 +156,6 @@
       color: #007bff;
       display: inline-block; }
 
-.Ei {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 600;
-  margin: 0px 0px 0px 81px;
-  font-size: 15px; }
-
 .segundo {
   display: inline-block;
   text-align: left;
@@ -168,7 +164,14 @@
   font-size: 14px;
   padding: 0px 24px 33px 81px;
   margin: -39px 0px 0px 0px;
-  line-height: 24px; }
+  line-height: 24px;
+  color: #444; }
+
+.Ei {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  margin: 0px 0px 0px 81px;
+  font-size: 15px; }
 
 .Mag {
   font-family: "Montserrat", sans-serif;
@@ -176,31 +179,11 @@
   margin: 0px 0px 0px 81px;
   font-size: 15px; }
 
-.tercero {
-  display: inline-block;
-  text-align: left;
-  font-weight: 400;
-  font-family: "Open Sans", sans-serif;
-  font-size: 14px;
-  padding: 0px 24px 33px 81px;
-  margin: -39px 0px 0px 0px;
-  line-height: 24px; }
-
 .Dol {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
   margin: 0px 0px 0px 81px;
   font-size: 15px; }
-
-.cuarto {
-  display: inline-block;
-  text-align: left;
-  font-weight: 400;
-  font-family: "Open Sans", sans-serif;
-  font-size: 14px;
-  padding: 0px 24px 33px 81px;
-  margin: -39px 0px 0px 0px;
-  line-height: 24px; }
 
 .general2 img {
   width: 360px;
@@ -215,7 +198,8 @@
 .general2 .dos {
   padding: 0px 15px;
   font-family: "Open Sans", sans-serif;
-  font-size: 16px; }
+  font-size: 16px;
+  color: #444; }
 
 #services {
   background-color: #ecf5ff; }
@@ -326,13 +310,36 @@
     right: 19px; }
 
 #testimonials {
-  background: #ecf5ff; }
+  background: #ecf5ff;
+  text-align: center;
+  padding: 0px 15px;
+  padding-bottom: 60px;
+  padding-top: 60px; }
+  #testimonials h4 {
+    font-family: "Montserrat", sans-serif;
+    margin: 10px 0 5px 0; }
+  #testimonials h5 {
+    font-family: "Montserrat", sans-serif;
+    color: #999;
+    font-size: 14px;
+    margin: 0 0 15px 0;
+    font-weight: 400; }
+  #testimonials p {
+    font-style: italic;
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    margin: 0 15px 0 0;
+    color: #444; }
 
 .wason {
   width: 120px;
   border-radius: 50%;
   max-width: 100%;
-  border: 4px solid #ffffff; }
+  border: 4px solid #ffffff;
+  display: block;
+  align-items: center;
+  margin: auto;
+  float: none; }
 
 .team p {
   font-family: "Open Sans", sans-serif;
