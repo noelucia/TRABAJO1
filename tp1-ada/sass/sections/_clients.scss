@@ -1,6 +1,13 @@
 #our-clients{
     background-color:#ecf5ff;
     padding: $padding-general;
+    padding-bottom: 60px;
+    .clientes{
+        color: $color-textitos;
+        font-family: $font-texto;
+        text-align: center;
+        padding-bottom: 60px;
+    }
     .tarjeta{
         background-color: #ffffff;
         padding: 64px;

@@ -1,11 +1,20 @@
-.team {
+#team{
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding: $padding-general;
+}
+.contenedort {
   p {
     font-family: $font-texto;
     color: $font-color-p-cabecera;
     text-align: center;
     font-size: $fontsize-sm;
     line-height: 1.5;
-    padding: $padding-general;
+    padding-bottom: 60px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    color:$color-textitos;
+  
   }
   .team1 {
     margin: 20px;
@@ -13,7 +22,7 @@
     justify-content: center;
     .batman {
       display: block;
-      max-width: 75%;
+      max-width: 100%;
       width: auto;
       height: auto;
       border-radius: 50%;

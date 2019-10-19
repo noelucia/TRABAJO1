@@ -1,5 +1,7 @@
 #about-us {
   padding: $padding-general;
+  padding-top: 60px;
+  padding-bottom: 60px;
   .texto {
     font-family: $font-texto;
     font-size: $fontsize-reg;
@@ -10,9 +12,10 @@
   }
   .gente {
     img {
-      width: 360px;
-      height: 250px;
+      width: 100%;
+      height: auto;
       vertical-align: middle;
+      box-sizing: border-box;
     }
   }
   .general {
@@ -23,6 +26,7 @@
         font-size: $fontsize-reg;
         line-height: 24px;
         color: $color-textitos;
+        margin-bottom: 30px;
       }
     }
   }
@@ -86,10 +90,10 @@
  
 .general2{
     img {
-      width: 360px;
-      height: 250px;
+      width: 100%;
+      height: auto;
       vertical-align: middle;
-      padding: $padding-general;
+      box-sizing: border-box;
       }
         
     .Sub{
@@ -103,6 +107,7 @@
       font-family:  $font-texto;
       font-size: 16px;
       color: $color-textitos;
+      margin-bottom: 30px;
       }
 
 }
