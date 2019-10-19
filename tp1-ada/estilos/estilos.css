@@ -66,24 +66,44 @@
   padding: 10px;
   padding-top: 0;
 }
-#header .sidebar .sidenav .side-menu .dropdown p {
-  margin-block-start: 0;
-  margin-block-end: 0;
+#header .sidebar .sidenav .side-menu .dropdown label {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
 }
-#header .sidebar .sidenav .side-menu .dropdown .dropdown-content {
+#header .sidebar .sidenav .side-menu .dropdown p,
+#header .sidebar .sidenav .side-menu .dropdown .arrow {
+  margin-block-end: 0;
+  display: flex;
+  justify-content: space-between;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+#header .dropdown-content {
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  height: 0;
+  transition: height 0.75s ease;
 }
-#header .sidebar .sidenav .side-menu .dropdown .dropdown-content .dropdown-submenu {
+#header .dropdown-content .dropdown-submenu {
   display: flex;
 }
-#header .sidebar .sidenav .side-menu .dropdown .dropdown-content .deepdropdown-menu {
+#header .dropdown-content .dropdown-submenu .submenu-title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+#header .dropdown-content .deepdropdown-menu {
   display: flex;
   flex-direction: column;
   padding: 10px;
   box-sizing: border-box;
 }
-#header .sidebar .sidenav .side-menu .dropdown .dropdown-content .deepdropdown-menu .linkdeep {
+#header .dropdown-content .deepdropdown-menu .linkdeep {
   padding: 10px;
 }
 #header .overlay {
@@ -97,14 +117,15 @@
   display: none;
 }
 
-.checkbox {
+.checkbox,
+.checkbox2 {
   display: flex;
   padding: 5px 0px;
   justify-content: center;
   display: none;
 }
 
-#check-box:checked + .sidebar {
+#check-box:checked ~ .sidebar {
   left: 0;
   opacity: 1;
 }
@@ -113,9 +134,17 @@
   display: block;
 }
 
-#check-box:checked ~ .overlay .cross {
+#check-box:checked ~ .header-container > label > .cross {
   display: flex;
   z-index: 914;
+}
+
+#check-box:checked ~ .header-container > label > .hamburguesa {
+  display: none;
+}
+
+#downarrow:checked + .dropdown-content {
+  height: 75px;
 }
 
 #home {

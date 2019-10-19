@@ -37,6 +37,7 @@
 ======================================-->
 
     <header id="header" class="fixed">
+      <input type="checkbox" name="checkbox" class="checkbox" id="check-box" />
       <div class="header-container">
         <img src="img/logo.png" />
         <label for="check-box" class="btn">
@@ -44,8 +45,6 @@
           <i class="fa fa-times cross" aria-hidden="true"></i>
         </label>
       </div>
-
-      <input type="checkbox" name="checkbox" class="checkbox" id="check-box" />
 
       <div class="sidebar">
         <nav class="sidenav">
@@ -55,14 +54,26 @@
             <a class="link">Services</a>
             <a class="link">Portfolio</a>
             <a class="link">Team</a>
+
             <div class="dropdown">
-              <p>Drop down<i class="fa fa-sort-desc arrow" aria-hidden="true"></i></p>
-              
+              <label for="downarrow">
+                <p>Drop down</p>
+                <i class="fa fa-sort-desc arrow" aria-hidden="true"></i>
+              </label>
+              <input
+                type="checkbox"
+                name="downarrow"
+                class="checkbox2"
+                id="downarrow"
+              />
+
               <div class="dropdown-content">
                 <p>Drop Down 1</p>
                 <div class="dropdown-submenu">
-                  <p>Drop Down 2</p>
-                  <i class="fa fa-sort-desc arrow" aria-hidden="true"></i>
+                  <div class="submenu-title">
+                    <p>Drop Down 2</p>
+                    <i class="fa fa-sort-desc arrow" aria-hidden="true"></i>
+                  </div>
                 </div>
                 <div class="deepdropdown-menu">
                   <a class="linkdeep">Deep DropDown 1</a>
