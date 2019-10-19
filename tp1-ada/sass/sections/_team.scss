@@ -1,19 +1,22 @@
-.team{ 
-    p{
-       font-family: $font-texto;
-       color: $font-color-p-cabecera;
-       text-align: center;
-       font-size: $fontsize-sm;
-       line-height: 1.5;
-       padding: $padding-general;
-      
+.team {
+  p {
+    font-family: $font-texto;
+    color: $font-color-p-cabecera;
+    text-align: center;
+    font-size: $fontsize-sm;
+    line-height: 1.5;
+    padding: $padding-general;
+  }
+  .team1 {
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    .batman {
+      display: block;
+      max-width: 75%;
+      width: auto;
+      height: auto;
+      border-radius: 50%;
     }
-   .team1{
-     margin:20px;
-         .batman{
-          height:340px;
-          border-radius: 175px;
-         max-width: 118%;
-          }
-}
+  }
 }
