@@ -232,17 +232,20 @@
     }
   }
   .parte-inferior {
-    padding: $padding-general;
+    padding: 10px 15px;
     background-color: #00458f;
     margin:0;
     text-align: center;
     font-family: $font-texto; 
+    display: flex;
+    flex-direction: column;
     .copyright {
        
         font-size: $fontsize-sm;
     }
     .designed {
         font-size: $fontsize-sm;
+
     }
   }
 }
