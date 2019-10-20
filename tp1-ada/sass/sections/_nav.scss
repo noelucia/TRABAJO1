@@ -1,3 +1,6 @@
+@import "../common/mixins";
+
+
 #header {
   width: 100%;
   background-color: #ffffff;
@@ -33,9 +36,6 @@
     }
   }
 
-  .nav-menu {
-    display: none;
-  }
 
   .sidebar {
     height: auto;
@@ -102,9 +102,16 @@
     height: 100%;
     z-index: 910;
     display: none;
+    @include laptop{
+      background: none;
+    }
   }
 }
-
+.header-container > label > .hamburguesa{
+  @include laptop{
+    display: none;
+  }
+}
 .checkbox,
 .checkbox2 {
   display: flex;
@@ -125,6 +132,9 @@
 #check-box:checked ~ .header-container > label > .cross {
   display: flex;
   z-index: 914;
+  @include laptop{
+    display: none;
+  }
 }
 
 #check-box:checked ~ .header-container > label > .hamburguesa {

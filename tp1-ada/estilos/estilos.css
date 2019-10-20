@@ -33,9 +33,6 @@
   color: #ffffff;
   display: none;
 }
-#header .nav-menu {
-  display: none;
-}
 #header .sidebar {
   height: auto;
   font-family: "Open Sans", sans-serif;
@@ -97,6 +94,17 @@
   z-index: 910;
   display: none;
 }
+@media (min-width: 1025px) {
+  #header .overlay {
+    background: none;
+  }
+}
+
+@media (min-width: 1025px) {
+  .header-container > label > .hamburguesa {
+    display: none;
+  }
+}
 
 .checkbox,
 .checkbox2 {
@@ -118,6 +126,11 @@
 #check-box:checked ~ .header-container > label > .cross {
   display: flex;
   z-index: 914;
+}
+@media (min-width: 1025px) {
+  #check-box:checked ~ .header-container > label > .cross {
+    display: none;
+  }
 }
 
 #check-box:checked ~ .header-container > label > .hamburguesa {
