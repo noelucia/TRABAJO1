@@ -1,108 +1,152 @@
+@import "../common/mixins";
+
 .contact-container {
   padding: $padding-general;
   font-family: $font-texto;
   font-size: $fontsize-reg;
   color: #283d50;
+  @include laptop {
+    display: flex;
+    flex-direction: row;
+    font-size: $fontsize-sm;
+  }
   iframe {
     width: 100%;
     height: 250px;
     margin-bottom: 20px;
-  }
-  .datos {
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    position: relative;
-    .direccion,
-    .email,
-    .telefono {
-      display: flex;
-      flex-direction: row;
-      line-height: 10px;
-      margin-bottom: 20px;
-    }
-    .icono1 {
-      margin-right: 10px;
-      height: 30px;
-      line-height: 35px;
-      color: $color-button-icon;
-    }
-    .a {
-      font-size: 30px;
-    }
-    .b {
-      font-size: 20px;
-    }
-    .c {
-      font-size: 25px;
-    }
-    p {
-      display: flex;
-      flex-direction: row;
-      margin-left: 10px;
+    @include laptop {
+      width: 50%;
+      height: auto;
+      margin-bottom: 130px;
     }
   }
-  .form {
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    flex-wrap: wrap;
-    width: 100%;
-    margin-bottom: 65px;
 
-    input {
-      width: 100%;
-      margin: 10px 0;
-      height: 35px;
-      padding: 10px;
-      box-sizing: border-box;
-      border: 2px solid #ced4da;
-      color: #444;
-      font-family: $font-texto;
-      border-radius: 5px;
+  .datos-wrapper {
+    display: flex;
+    flex-direction: column;
+    @include laptop {
+      padding: 0 20px;
     }
-    textarea {
-      width: 100%;
-      margin-top: 10px;
-      height: 150px;
-      padding: 10px;
-      box-sizing: border-box;
-      border: 2px solid #ced4da;
-      color: #444;
-      font-family: $font-texto;
-      border-radius: 5px;
-    }
-    .boton {
+
+    .datos {
       display: flex;
-      align-items: center;
-      justify-content: space-around;
-    }
-    .btn {
-      padding: 10px 32px;
-      margin-top: 20px;
+      flex-direction: column;
       box-sizing: border-box;
-      font-family: $font-title;
-      color: #ffffff;
-      text-align: center;
-      transition: all 0.2s;
-      font-size: $fontsize-sm;
-      font-weight: $font-weight-subtitulos;
-      letter-spacing: 1px;
-      border-radius: 32px;
-    }
-    .btn1 {
-      border: 2px solid $color-button-icon;
-      background-color: $color-button-icon;
+      position: relative;
+      @include laptop {
+        flex-direction: row;
+      }
+      .direccion,
+      .email,
+      .telefono {
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 20px;
+        align-items: center;
+        @include laptop {
+          margin-right: 15px;
+          &:last-child {
+            margin-right: 0;
+          }
+        }
+      }
+      .icono1 {
+        margin-right: 10px;
+        height: 30px;
+        color: $color-button-icon;
+      }
+      .a {
+        font-size: 30px;
+        @include laptop {
+        }
+      }
+      .b {
+        font-size: 20px;
+      }
+      .c {
+        font-size: 25px;
+      }
+      p {
+        display: flex;
+        flex-direction: row;
+      }
     }
   }
 }
+
+.form {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 65px;
+
+  input {
+    width: 100%;
+    margin: 10px 0;
+    height: 35px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid #ced4da;
+    color: #444;
+    font-family: $font-texto;
+    border-radius: 5px;
+  }
+  textarea {
+    width: 100%;
+    margin-top: 10px;
+    height: 150px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 2px solid #ced4da;
+    color: #444;
+    font-family: $font-texto;
+    border-radius: 5px;
+  }
+  .boton {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .btn {
+    padding: 10px 32px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    font-family: $font-title;
+    color: #ffffff;
+    text-align: center;
+    transition: all 0.2s;
+    font-size: $fontsize-sm;
+    font-weight: $font-weight-subtitulos;
+    letter-spacing: 1px;
+    border-radius: 32px;
+  }
+  .btn1 {
+    border: 2px solid $color-button-icon;
+    background-color: $color-button-icon;
+  }
+}
+
+.nombremail {
+  display: flex;
+  flex-direction: column;
+  @include laptop {
+    flex-direction: row;
+    justify-content: space-between;
+    input {
+      width: 49%;
+    }
+  }
+}
+
 .pie-pagina {
-    background-color: #00458f;
+  background-color: #00458f;
   color: #ffffff;
   .parte-superior {
     padding: $padding-general;
     background-color: $background-color;
-    margin-top:0;
+    margin-top: 0;
 
     .wayne {
       .twayne {
@@ -110,8 +154,8 @@
         font-size: $font-size-title;
         letter-spacing: 2px;
         font-weight: 400;
-        padding-top:30px;
-        margin-top:0;
+        padding-top: 30px;
+        margin-top: 0;
       }
       p {
         font-family: $font-texto;
@@ -234,18 +278,16 @@
   .parte-inferior {
     padding: 10px 15px;
     background-color: #00458f;
-    margin:0;
+    margin: 0;
     text-align: center;
-    font-family: $font-texto; 
+    font-family: $font-texto;
     display: flex;
     flex-direction: column;
     .copyright {
-       
-        font-size: $fontsize-sm;
+      font-size: $fontsize-sm;
     }
     .designed {
-        font-size: $fontsize-sm;
-
+      font-size: $fontsize-sm;
     }
   }
 }

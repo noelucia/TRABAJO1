@@ -336,6 +336,9 @@
 }
 #services .card-container {
   padding: 3px 15px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
 #why-choose-us {
@@ -354,27 +357,40 @@
 }
 #why-choose-us .card-container {
   padding: 0px 15px;
+  display: flex;
+  flex-direction: column;
 }
-#why-choose-us .countdown {
+@media (min-width: 1025px) {
+  #why-choose-us .card-container {
+    flex-direction: row;
+  }
+}
+
+.countdown {
   display: flex;
   justify-content: space-evenly;
   font-family: "Montserrat", sans-serif;
   flex-flow: row wrap;
   margin-bottom: 60px;
 }
-#why-choose-us .countdown div {
+@media (min-width: 768px) {
+  .countdown {
+    flex-flow: unset;
+  }
+}
+.countdown div {
   color: #ffffff;
   width: 30%;
   display: inline-block;
   padding: 0 15px;
 }
-#why-choose-us .countdown div .numeros {
+.countdown div .numeros {
   font-size: 50px;
   font-weight: 600;
   margin: 0;
   text-align: center;
 }
-#why-choose-us .countdown div p {
+.countdown div p {
   text-align: center;
 }
 
@@ -564,46 +580,85 @@
   font-size: 16px;
   color: #283d50;
 }
+@media (min-width: 1025px) {
+  .contact-container {
+    display: flex;
+    flex-direction: row;
+    font-size: 14px;
+  }
+}
 .contact-container iframe {
   width: 100%;
   height: 250px;
   margin-bottom: 20px;
 }
-.contact-container .datos {
+@media (min-width: 1025px) {
+  .contact-container iframe {
+    width: 50%;
+    height: auto;
+    margin-bottom: 130px;
+  }
+}
+.contact-container .datos-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1025px) {
+  .contact-container .datos-wrapper {
+    padding: 0 20px;
+  }
+}
+.contact-container .datos-wrapper .datos {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   position: relative;
 }
-.contact-container .datos .direccion,
-.contact-container .datos .email,
-.contact-container .datos .telefono {
+@media (min-width: 1025px) {
+  .contact-container .datos-wrapper .datos {
+    flex-direction: row;
+  }
+}
+.contact-container .datos-wrapper .datos .direccion,
+.contact-container .datos-wrapper .datos .email,
+.contact-container .datos-wrapper .datos .telefono {
   display: flex;
   flex-direction: row;
-  line-height: 10px;
   margin-bottom: 20px;
+  align-items: center;
 }
-.contact-container .datos .icono1 {
+@media (min-width: 1025px) {
+  .contact-container .datos-wrapper .datos .direccion,
+.contact-container .datos-wrapper .datos .email,
+.contact-container .datos-wrapper .datos .telefono {
+    margin-right: 15px;
+  }
+  .contact-container .datos-wrapper .datos .direccion:last-child,
+.contact-container .datos-wrapper .datos .email:last-child,
+.contact-container .datos-wrapper .datos .telefono:last-child {
+    margin-right: 0;
+  }
+}
+.contact-container .datos-wrapper .datos .icono1 {
   margin-right: 10px;
   height: 30px;
-  line-height: 35px;
   color: #007bff;
 }
-.contact-container .datos .a {
+.contact-container .datos-wrapper .datos .a {
   font-size: 30px;
 }
-.contact-container .datos .b {
+.contact-container .datos-wrapper .datos .b {
   font-size: 20px;
 }
-.contact-container .datos .c {
+.contact-container .datos-wrapper .datos .c {
   font-size: 25px;
 }
-.contact-container .datos p {
+.contact-container .datos-wrapper .datos p {
   display: flex;
   flex-direction: row;
-  margin-left: 10px;
 }
-.contact-container .form {
+
+.form {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
@@ -611,7 +666,7 @@
   width: 100%;
   margin-bottom: 65px;
 }
-.contact-container .form input {
+.form input {
   width: 100%;
   margin: 10px 0;
   height: 35px;
@@ -622,7 +677,7 @@
   font-family: "Open Sans", sans-serif;
   border-radius: 5px;
 }
-.contact-container .form textarea {
+.form textarea {
   width: 100%;
   margin-top: 10px;
   height: 150px;
@@ -633,12 +688,12 @@
   font-family: "Open Sans", sans-serif;
   border-radius: 5px;
 }
-.contact-container .form .boton {
+.form .boton {
   display: flex;
   align-items: center;
   justify-content: space-around;
 }
-.contact-container .form .btn {
+.form .btn {
   padding: 10px 32px;
   margin-top: 20px;
   box-sizing: border-box;
@@ -651,9 +706,23 @@
   letter-spacing: 1px;
   border-radius: 32px;
 }
-.contact-container .form .btn1 {
+.form .btn1 {
   border: 2px solid #007bff;
   background-color: #007bff;
+}
+
+.nombremail {
+  display: flex;
+  flex-direction: column;
+}
+@media (min-width: 1025px) {
+  .nombremail {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .nombremail input {
+    width: 49%;
+  }
 }
 
 .pie-pagina {
@@ -810,6 +879,17 @@
   overflow: hidden;
   box-shadow: 0 20px 10px 0 rgba(122, 149, 221, 0.1);
 }
+@media (min-width: 768px) {
+  .card {
+    max-width: 40%;
+  }
+  .card:nth-child(odd) {
+    margin-right: 15px;
+  }
+  .card:nth-child(even) {
+    margin-left: 15px;
+  }
+}
 .card .iconos {
   display: inline;
   position: absolute;
@@ -863,6 +943,11 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+@media (min-width: 1025px) {
+  .cardb {
+    width: 33%;
+  }
 }
 .cardb .iconos2 {
   font-size: 50px;
