@@ -147,6 +147,19 @@
     padding: $padding-general;
     background-color: $background-color;
     margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    @include laptop {
+      flex-direction: row;
+    }
+
+    & > div {
+      margin: 15px 0 0 0;
+      @include laptop {
+        margin: 0 15px;
+        padding-top: 20px;
+      }
+    }
 
     .wayne {
       .twayne {
@@ -165,7 +178,7 @@
       }
     }
     .useful-links {
-      margin-top: 35px;
+      //margin-top: 35px;
       .subtitulo-links {
         font-family: $font-title;
         font-size: $fontsize-reg;
@@ -191,37 +204,45 @@
         }
       }
     }
-    .contact-us {
-      .subtitulo-links {
-        font-family: $font-title;
-        font-size: $fontsize-reg;
-        font-weight: $font-weight-subtitulos;
-      }
-      p {
-        font-family: $font-title;
-        font-size: $fontsize-sm;
-      }
-    }
-    .redes-sociales {
-      margin-top: 30px;
+    .contactredes {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
 
-      .circle {
-        border-radius: 50%;
-        height: 40px;
-        width: 40px;
-        background-color: $color-button-icon;
-        margin: 0 10px;
-        text-decoration: none;
-        text-align: center;
-        display: inline-block;
-        i {
-          color: #ffffff;
-          padding: 10px;
-          font-size: 20px;
-          &.instagram {
-            font-size: 23px;
+      .contact-us {
+        .subtitulo-links {
+          font-family: $font-title;
+          font-size: $fontsize-reg;
+          font-weight: $font-weight-subtitulos;
+        }
+        p {
+          font-family: $font-title;
+          font-size: $fontsize-sm;
+        }
+      }
+      .redes-sociales {
+        //margin-top: 30px;
+        display: flex;
+        flex-direction: row;
+        @include laptop {
+          margin-top: 16px;
+        }
+
+        .circle {
+          border-radius: 50%;
+          height: 40px;
+          width: 40px;
+          background-color: $color-button-icon;
+          margin: 0 10px;
+          text-decoration: none;
+          text-align: center;
+          display: inline-block;
+          i {
+            color: #ffffff;
+            padding: 10px;
+            font-size: 20px;
+            &.instagram {
+              font-size: 23px;
+            }
           }
         }
       }
@@ -239,11 +260,11 @@
         padding-right: 10px;
       }
       form {
-        display: inline-block;
         margin-bottom: 65px;
+        display: flex;
+        flex-direction: row;
         input {
           width: 55%;
-          margin: 10px 0;
           height: 35px;
           padding: 10px;
           box-sizing: border-box;
@@ -258,7 +279,6 @@
 
         .btn {
           padding: 10px 31px;
-          margin-top: 20px;
           box-sizing: border-box;
           font-family: $font-title;
           color: #ffffff;
