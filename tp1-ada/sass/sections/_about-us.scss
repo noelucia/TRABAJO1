@@ -31,6 +31,9 @@
     }
   }
 
+  .Eiusmod{
+    padding: 0px 0px 30px 0px;
+  }
 
  .icono{
     border-radius: 50%;
@@ -40,7 +43,6 @@
     float: left;
     border: 2px solid #007bff;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
@@ -52,42 +54,26 @@
   }
 }
 
-.segundo {
-  display: inline-block;
-  text-align: left;
-  font-weight: $font-weight-texto;
-  font-family: $font-texto;
-  font-size: $fontsize-sm;
-  padding: 0px 24px 33px 81px;
-  margin: -39px 0px 0px 0px;
-  line-height: 24px;
-  color: $color-textitos;
-}
 
-.Ei {
+.ei {
     font-family: $font-title;
     font-weight: $font-weight-subtitulos;
-    margin: 0px 0px 0px 81px;
-    font-size: 15px;
+    font-size: 18px; 
+    margin: 0px 0 5px 80px;
+
+  }
+  
+  .segundo {
+    text-align: left;
+    font-weight: $font-weight-texto;
+    font-family: $font-texto;
+    font-size: $fontsize-sm;
+    line-height: 24px;
+    color: $color-textitos;
+    margin: 0px 0px 0px 80px;
+  
   }
 
-
-    
-.Mag {
-     font-family: $font-title;
-     font-weight: $font-weight-subtitulos;
-     margin: 0px 0px 0px 81px;
-     font-size: 15px;
-  }
-      
-.Dol{
-   font-family: $font-title;
-   font-weight: $font-weight-subtitulos;
-   margin: 0px 0px 0px 81px;
-  font-size: 15px;
- }
-
- 
 .general2{
     img {
       width: 100%;
@@ -97,13 +83,11 @@
       }
         
     .Sub{
-      padding: $padding-general;
       font-family: $font-texto;
       font-weight: $font-weight-subtitulos;
       color: $font-color-sub-aboutus;
       }
     .dos{
-      padding: $padding-general;
       font-family:  $font-texto;
       font-size: 16px;
       color: $color-textitos;
