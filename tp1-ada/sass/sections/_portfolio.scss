@@ -1,7 +1,7 @@
 @import "../common/mixins";
 #portfolio {
   padding-bottom: 60px;
-  @include laptop{
+  @include laptop {
     margin-right: 80px;
     margin-left: 80px;
   }
@@ -10,7 +10,6 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  
 
   .boton {
     cursor: pointer;
@@ -22,24 +21,21 @@
     background: $choose-text-color;
     font-size: 12px;
     &:hover {
-        background: $color-button-icon;
-        color: #ffffff;
-    
+      background: $color-button-icon;
+      color: #ffffff;
     }
-    
   }
 }
 .card-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  @include laptop {
+    flex-direction: row;
+    flex-flow: row wrap;
     display: flex;
-    flex-direction: column;
-    width: 100%;
-    @include laptop{
-        flex-direction: row;
-        flex-flow: row wrap;
-        display: flex;
-        justify-content: center;
-
-    }
+    justify-content: center;
+  }
   .imagen {
     height: 250px;
     overflow: hidden;
@@ -53,104 +49,100 @@
       height: 250px;
       display: flex;
       margin-bottom: 30px;
-    
     }
 
     &.celular {
-     background: url("../img/portfolio/app1.jpg") center no-repeat;
-     background-size: cover;
+      background: url("../img/portfolio/app1.jpg") center no-repeat;
+      background-size: cover;
     }
-    
+
     &.compu {
-        background: url("../img/portfolio/web3.jpg") center no-repeat;
-        background-size: cover;
-       }
+      background: url("../img/portfolio/web3.jpg") center no-repeat;
+      background-size: cover;
+    }
 
     &.cel {
-        background: url("../img/portfolio/app2.jpg") center no-repeat;
-        background-size: cover;
-       }
+      background: url("../img/portfolio/app2.jpg") center no-repeat;
+      background-size: cover;
+    }
 
     &.berlin {
-        background: url("../img/portfolio/card2.jpg") center no-repeat;
-        background-size: cover;
-       }
+      background: url("../img/portfolio/card2.jpg") center no-repeat;
+      background-size: cover;
+    }
 
     &.web {
-        background: url("../img/portfolio/web2.jpg") center no-repeat;
-        background-size: cover;
-       }
+      background: url("../img/portfolio/web2.jpg") center no-repeat;
+      background-size: cover;
+    }
 
     &.manos {
-        background: url("../img/portfolio/app3.jpg") center no-repeat;
-        background-size: cover;
-       }
+      background: url("../img/portfolio/app3.jpg") center no-repeat;
+      background-size: cover;
+    }
 
     &.thank {
-        background: url("../img/portfolio/card1.jpg") center no-repeat;
-        background-size: cover;
-       }
+      background: url("../img/portfolio/card1.jpg") center no-repeat;
+      background-size: cover;
+    }
 
     &.tarjetas {
-        background: url("../img/portfolio/card3.jpg") center no-repeat;
-        background-size: cover;
-       }
+      background: url("../img/portfolio/card3.jpg") center no-repeat;
+      background-size: cover;
+    }
 
     &.tablet {
-        background: url("../img/portfolio/web1.jpg") center no-repeat;
-        background-size: cover;
-       }
+      background: url("../img/portfolio/web1.jpg") center no-repeat;
+      background-size: cover;
     }
+  }
 
-    .overlay{
-        top:0;
-        left:0;
-        right: 0;
-        width: 100%;
-        height: 250px;
-        opacity: 0;
-        transition: .5s ease;
-        background-color: rgba(0, 66, 137,0.5);
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        h2{
-            font-family: $font-title;
-            font-size: 22px;
-            color: #ffffff;
-            margin-bottom: 0;   
-        }
-        span{
-            font-family: $font-texto;
-            font-size: $fontsize-sm;
-            color: #ffffff;
-            margin-bottom: 10px;
-        }
-        .iconoscirculo{
-            display: flex;
-            flex-direction: row;
-            .circulito{
-                border-radius: 50%;
-                background-color: $color-button-icon;
-                height: 36px;
-                width: 36px;
-                display: inline-block;
-                text-align: center;
-                margin: 0 10px;
-                .iconito{
-                    color:#ffffff;
-                    text-align: center;
-                    padding-top: 6px;
-                    font-size: 22px;
-                }
-            }
-
-        }
-
-        }
-    .imagen:hover .overlay{
-        opacity: 1;
+  .overlay {
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 250px;
+    opacity: 0;
+    transition: 0.5s ease;
+    background-color: rgba(0, 66, 137, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2 {
+      font-family: $font-title;
+      font-size: 22px;
+      color: #ffffff;
+      margin-bottom: 0;
     }
+    span {
+      font-family: $font-texto;
+      font-size: $fontsize-sm;
+      color: #ffffff;
+      margin-bottom: 10px;
     }
-    
+    .iconoscirculo {
+      display: flex;
+      flex-direction: row;
+      .circulito {
+        border-radius: 50%;
+        background-color: $color-button-icon;
+        height: 36px;
+        width: 36px;
+        display: inline-block;
+        text-align: center;
+        margin: 0 10px;
+        .iconito {
+          color: #ffffff;
+          text-align: center;
+          padding-top: 6px;
+          font-size: 22px;
+        }
+      }
+    }
+  }
+  .imagen:hover .overlay {
+    opacity: 1;
+  }
+}
