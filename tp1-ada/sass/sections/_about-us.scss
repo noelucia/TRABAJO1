@@ -1,17 +1,21 @@
 #about-us {
   padding: $padding-general;
+  padding-top: 60px;
+  padding-bottom: 60px;
   .texto {
     font-family: $font-texto;
     font-size: $fontsize-reg;
     line-height: 20px;
     text-align: center;
     padding: 0px 0px 50px;
+    color: $color-textitos;
   }
   .gente {
     img {
-      width: 360px;
-      height: 250px;
+      width: 100%;
+      height: auto;
       vertical-align: middle;
+      box-sizing: border-box;
     }
   }
   .general {
@@ -21,6 +25,8 @@
         font-family: $font-texto;
         font-size: $fontsize-reg;
         line-height: 24px;
+        color: $color-textitos;
+        margin-bottom: 30px;
       }
     }
   }
@@ -46,6 +52,17 @@
   }
 }
 
+.segundo {
+  display: inline-block;
+  text-align: left;
+  font-weight: $font-weight-texto;
+  font-family: $font-texto;
+  font-size: $fontsize-sm;
+  padding: 0px 24px 33px 81px;
+  margin: -39px 0px 0px 0px;
+  line-height: 24px;
+  color: $color-textitos;
+}
 
 .Ei {
     font-family: $font-title;
@@ -53,16 +70,7 @@
     margin: 0px 0px 0px 81px;
     font-size: 15px;
   }
-.segundo {
-     display: inline-block;
-     text-align: left;
-     font-weight: $font-weight-texto;
-     font-family: $font-texto;
-     font-size: $fontsize-sm;
-     padding: 0px 24px 33px 81px;
-     margin: -39px 0px 0px 0px;
-     line-height: 24px;
-  }
+
 
     
 .Mag {
@@ -71,16 +79,6 @@
      margin: 0px 0px 0px 81px;
      font-size: 15px;
   }
- .tercero{
-    display: inline-block;
-    text-align: left;
-    font-weight: $font-weight-texto;
-    font-family: $font-texto;
-    font-size: $fontsize-sm;
-    padding: 0px 24px 33px 81px;
-    margin: -39px 0px 0px 0px;
-    line-height: 24px;
-  }
       
 .Dol{
    font-family: $font-title;
@@ -88,22 +86,14 @@
    margin: 0px 0px 0px 81px;
   font-size: 15px;
  }
- .cuarto{
-   display: inline-block;
-   text-align: left;
-   font-weight: $font-weight-texto;
-   font-family: $font-texto;
-   font-size: $fontsize-sm;
-   padding: 0px 24px 33px 81px;
-   margin: -39px 0px 0px 0px;
-   line-height: 24px;
- }
+
+ 
 .general2{
     img {
-      width: 360px;
-      height: 250px;
+      width: 100%;
+      height: auto;
       vertical-align: middle;
-      padding: $padding-general;
+      box-sizing: border-box;
       }
         
     .Sub{
@@ -116,6 +106,8 @@
       padding: $padding-general;
       font-family:  $font-texto;
       font-size: 16px;
+      color: $color-textitos;
+      margin-bottom: 30px;
       }
 
 }

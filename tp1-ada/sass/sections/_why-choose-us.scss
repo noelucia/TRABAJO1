@@ -1,6 +1,7 @@
 #why-choose-us {
   width: 100%;
   background-color: $background-color;
+  padding-bottom: 60px;
   .cabecera {
     .excepcion {
       color: #ffffff;
@@ -14,28 +15,35 @@
   }
   .card-container {
     padding: $padding-general;
+    display: flex;
+    flex-direction: column;
+    @include laptop {
+      flex-direction: row;
+    }
   }
-  .countdown{
-      display: flex;
-      justify-content: space-evenly;
-      font-family: $font-title;
-      flex-flow: row wrap;
-      margin-bottom: 60px;
-
-      div{
-        color: #ffffff;
-        width: 30%;
-        display: inline-block;
-        padding: 0 15px;
-        .numeros{
-            font-size: 50px;
-            font-weight: $font-weight-subtitulos;
-            margin:0;
-            text-align: center;
-        }
-        p{
-            text-align: center; 
-        }
-      }
+}
+.countdown {
+  display: flex;
+  justify-content: space-evenly;
+  font-family: $font-title;
+  flex-flow: row wrap;
+  margin-bottom: 60px;
+  @include tablet {
+    flex-flow: unset;
+  }
+  div {
+    color: #ffffff;
+    width: 30%;
+    display: inline-block;
+    padding: 0 15px;
+    .numeros {
+      font-size: 50px;
+      font-weight: $font-weight-subtitulos;
+      margin: 0;
+      text-align: center;
+    }
+    p {
+      text-align: center;
+    }
   }
 }
