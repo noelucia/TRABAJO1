@@ -77,6 +77,7 @@
     color: #00458f;
     width: unset;
     font-family: "Montserrat", sans-serif;
+    font-weight: 600;
   }
 }
 #header .sidebar .sidenav .side-menu {
@@ -98,6 +99,9 @@
   cursor: pointer;
   text-decoration: none;
   color: #ffffff;
+}
+#header .sidebar .sidenav .side-menu .link:hover {
+  color: #007bff;
 }
 @media (min-width: 1025px) {
   #header .sidebar .sidenav .side-menu .link {
@@ -122,6 +126,9 @@
   justify-content: space-between;
   align-items: flex-end;
   cursor: pointer;
+}
+#header .sidebar .sidenav .side-menu .dropdown label:hover {
+  color: #007bff;
 }
 @media (min-width: 1025px) {
   #header .sidebar .sidenav .side-menu .dropdown label {
@@ -1115,6 +1122,9 @@
   margin-top: 0;
   margin-left: 45px;
 }
+.card .texto h2:hover {
+  color: #00458f;
+}
 .card .texto p {
   font-family: "Open Sans", sans-serif;
   font-size: 14px;
@@ -1133,6 +1143,9 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+.cardb:hover {
+  background-color: #003b7a;
 }
 @media (min-width: 1025px) {
   .cardb {

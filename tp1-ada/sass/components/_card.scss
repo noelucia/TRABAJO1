@@ -57,6 +57,10 @@
       color: $font-color-card;
       margin-top: 0;
       margin-left: 45px;
+      &:hover{
+        color: #00458f;
+
+      }
     }
     p {
       font-family: $font-texto;

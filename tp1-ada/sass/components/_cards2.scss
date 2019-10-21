@@ -9,6 +9,9 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  &:hover{
+    background-color: #003b7a;
+  }
   @include laptop {
     width: 33%;
   }
