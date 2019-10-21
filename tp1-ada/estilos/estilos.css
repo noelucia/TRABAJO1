@@ -8,6 +8,12 @@
   position: fixed;
   padding: 10px 0;
 }
+@media (min-width: 1025px) {
+  #header {
+    display: flex;
+    flex-direction: row;
+  }
+}
 #header .header-container {
   display: flex;
   flex-direction: row;
@@ -49,12 +55,34 @@
   background: rgba(19, 39, 57, 0.8);
   overflow: hidden;
 }
+@media (min-width: 1025px) {
+  #header .sidebar {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    opacity: 1;
+    transition: unset;
+    overflow: unset;
+    left: unset;
+    bottom: unset;
+    top: unset;
+    background: none;
+    color: #00458f;
+  }
+}
 #header .sidebar .sidenav .side-menu {
   display: flex;
   flex-direction: column;
   padding: 10px;
   padding-top: 20px;
   box-sizing: border-box;
+}
+@media (min-width: 1025px) {
+  #header .sidebar .sidenav .side-menu {
+    display: flex;
+    flex-direction: row;
+    padding-top: 10px;
+  }
 }
 #header .sidebar .sidenav .side-menu .link {
   padding: 10px;

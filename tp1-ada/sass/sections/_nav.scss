@@ -10,6 +10,11 @@
   z-index: 900;
   position: fixed;
   padding: 10px 0;
+  @include laptop{
+    display: flex;
+    flex-direction: row;
+  }
+
   .header-container {
     display: flex;
     flex-direction: row;
@@ -52,6 +57,20 @@
     transition: all 0.75s ease;
     background: rgba(19, 39, 57, 0.8);
     overflow: hidden;
+    @include laptop{
+      position:relative;
+      display: flex;
+      flex-direction: row;
+      opacity: 1;
+      transition: unset;
+      overflow: unset;
+      left:unset;
+      bottom: unset;
+      top:unset;
+      background:none;
+      color:#00458f;
+
+    }
 
     .sidenav {
       .side-menu {
@@ -60,6 +79,11 @@
         padding: 10px;
         padding-top: 20px;
         box-sizing: border-box;
+        @include laptop{
+          display: flex;
+          flex-direction: row;
+          padding-top:10px;
+        }
 
         .link {
           padding: 10px;
