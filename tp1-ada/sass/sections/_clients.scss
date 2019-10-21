@@ -1,27 +1,45 @@
-#our-clients{
-    background-color:#ecf5ff;
-    padding: $padding-general;
+@import "../common/mixins";
+
+#our-clients {
+  background-color: #ecf5ff;
+  padding: $padding-general;
+  padding-bottom: 60px;
+  .clientes {
+    color: $color-textitos;
+    font-family: $font-texto;
+    text-align: center;
     padding-bottom: 60px;
-    .clientes{
-        color: $color-textitos;
-        font-family: $font-texto;
-        text-align: center;
-        padding-bottom: 60px;
+  }
+  .card-wrapper {
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      flex-direction: row;
+      flex-flow: row wrap;
+
     }
-    .tarjeta{
-        background-color: #ffffff;
-        padding: 64px;
-        height: 160px;
-        box-sizing: border-box;
-        flex-direction: column;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        overflow: hidden;
-        border: 1px solid #d6eaff;        
-        .logo{   
-            max-width: 100%;
-        }
+    .tarjeta {
+      background-color: #ffffff;
+      padding: 64px;
+      height: 160px;
+      box-sizing: border-box;
+      flex-direction: column;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+      border: 1px solid #d6eaff;
+      
+      @include tablet{
+        width:33%;
+      }
+      @include laptop{
+        width:25%;
+      }
+      .logo {
+        max-width: 100%;
+      }
     }
+  }
 }

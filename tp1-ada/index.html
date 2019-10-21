@@ -36,7 +36,7 @@
 
 ======================================-->
 
-    <header id="header" class="fixed">
+    <header id="header">
       <input type="checkbox" name="checkbox" class="checkbox" id="check-box" />
       <div class="header-container">
         <img src="img/logo.png" />
@@ -57,7 +57,7 @@
 
             <div class="dropdown">
               <label for="downarrow">
-                <p>Drop down</p>
+                <span>Drop down</span>
                 <i class="fa fa-sort-desc arrow" aria-hidden="true"></i>
               </label>
               <input
@@ -68,19 +68,25 @@
               />
 
               <div class="dropdown-content">
-                <p>Drop Down 1</p>
-                <div class="dropdown-submenu">
-                  <div class="submenu-title">
+                <a class="link">Drop Down 1</a>
+                <div class="dropdown">
+                  <label for="downarrow2">
                     <p>Drop Down 2</p>
                     <i class="fa fa-sort-desc arrow" aria-hidden="true"></i>
+                  </label>
+                  <input
+                    type="checkbox"
+                    name="downarrow2"
+                    class="checkbox2"
+                    id="downarrow2"
+                  />
+                  <div class="dropdown-content">
+                    <a class="link">Deep DropDown 1</a>
+                    <a class="link">Deep DropDown 2</a>
+                    <a class="link">Deep DropDown 3</a>
+                    <a class="link">Deep DropDown 4</a>
+                    <a class="link">Deep DropDown 5</a>
                   </div>
-                </div>
-                <div class="deepdropdown-menu">
-                  <a class="linkdeep">Deep DropDown 1</a>
-                  <a class="linkdeep">Deep DropDown 2</a>
-                  <a class="linkdeep">Deep DropDown 3</a>
-                  <a class="linkdeep">Deep DropDown 4</a>
-                  <a class="linkdeep">Deep DropDown 5</a>
                 </div>
                 <a class="link">Drop Down 3</a>
                 <a class="link">Drop Down 4</a>
@@ -103,10 +109,12 @@
       <section id="home">
         <div class="home-container">
           <img class="hero-image" src="img/intro-img.svg" />
-          <h1>We provide <span>solutions</span> for your business</h1>
-          <div class="botones">
-            <a href="#about-us" class="btn btn1">Get Started</a>
-            <a href="#services" class="btn btn2">Our Services</a>
+          <div class="hero-text">
+            <h1>We provide <span>solutions</span> for your business</h1>
+            <div class="botones">
+              <a href="#about-us" class="btn btn1">Get Started</a>
+              <a href="#services" class="btn btn2">Our Services</a>
+            </div>
           </div>
         </div>
       </section>
@@ -149,20 +157,20 @@
               </p>
             </div>
           </div>
+          <div class="Eiusmod">
           <div class="icono">
             <i class="fa fa-picture-o" aria-hidden="true"></i>
           </div>
-          <div class="Eiusmod">
             <h4 class="ei">Magni Dolores</h4>
             <p class="segundo"> 
               Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
               officia deserunt mollit anim id est laborum
             </p>
           </div>
+          <div class="Eiusmod">
           <div class="icono">
             <i class="fa fa-bar-chart" aria-hidden="true"></i>
           </div>
-          <div class="Eiusmod">
             <h4 class="ei">Dolor Sitema</h4>
             <p class="segundo">
               Minim veniam, quis nostrud exercitation ullamco laboris nisi ut
@@ -361,23 +369,23 @@
               <p class="readMore">Read More</p>
             </article>
           </div>
-          <div class="countdown">
-            <div>
-              <p class="numeros">274</p>
-              <p>Clients</p>
-            </div>
-            <div>
-              <p class="numeros">421</p>
-              <p>Projects</p>
-            </div>
-            <div>
-              <p class="numeros">1364</p>
-              <p>Hours of Support</p>
-            </div>
-            <div>
-              <p class="numeros">18</p>
-              <p>Hard Workers</p>
-            </div>
+        </div>
+        <div class="countdown">
+          <div>
+            <p class="numeros">274</p>
+            <p>Clients</p>
+          </div>
+          <div>
+            <p class="numeros">421</p>
+            <p>Projects</p>
+          </div>
+          <div>
+            <p class="numeros">1364</p>
+            <p>Hours of Support</p>
+          </div>
+          <div>
+            <p class="numeros">18</p>
+            <p>Hard Workers</p>
           </div>
         </div>
       </section>
@@ -442,10 +450,11 @@
         <header class="cabecera">
           <h2 class="titulo">Testimonials</h2>
         </header>
+        <div class="testimonial-wrapper"> 
         <div class="contenedor">
           <img class="wason" src="img/testimonial-1.jpg" alt="wason" />
         </div>
-        <div class=" testimonios">
+        <div class="testimonios">
           <h4>Saul Goodman</h4>
           <h5>Ceo & Founder</h5>
           <p>
@@ -454,6 +463,7 @@
             eget nibh et. Maecen aliquam, risus at semper.
           </p>
         </div>
+      </div>
         <!-- <div class="contenedors">
           <img src="img/testimonial-2.jpg" alt="sara" />
         </div>
@@ -516,11 +526,11 @@
           <h2 class="titulo">Team</h2>
         </header>
         <div class="contenedort">
-            <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque
-            </p>
-          <div class="Teams">
+          <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque
+          </p>
+          <div class="teams">
             <div class="team1">
               <img class="batman" src="img/team-01.jpg" alt="tema1" />
             </div>
@@ -551,29 +561,31 @@
             accusantium doloremque dere santome nida.
           </p>
         </header>
-        <div class="tarjeta">
-          <img class="logo" src="img/clients/client-1.png" alt="cliente1" />
-        </div>
-        <div class="tarjeta">
-          <img class="logo" src="img/clients/client-2.png" alt="cliente2" />
-        </div>
-        <div class="tarjeta">
-          <img class="logo" src="img/clients/client-3.png" alt="cliente3" />
-        </div>
-        <div class="tarjeta">
-          <img class="logo" src="img/clients/client-4.png" alt="cliente4" />
-        </div>
-        <div class="tarjeta">
-          <img class="logo" src="img/clients/client-5.png" alt="cliente5" />
-        </div>
-        <div class="tarjeta">
-          <img class="logo" src="img/clients/client-6.png" alt="cliente6" />
-        </div>
-        <div class="tarjeta">
-          <img class="logo" src="img/clients/client-7.png" alt="cliente7" />
-        </div>
-        <div class="tarjeta">
-          <img class="logo" src="img/clients/client-8.png" alt="cliente8" />
+        <div class="card-wrapper">
+          <div class="tarjeta">
+            <img class="logo" src="img/clients/client-1.png" alt="cliente1" />
+          </div>
+          <div class="tarjeta">
+            <img class="logo" src="img/clients/client-2.png" alt="cliente2" />
+          </div>
+          <div class="tarjeta">
+            <img class="logo" src="img/clients/client-3.png" alt="cliente3" />
+          </div>
+          <div class="tarjeta">
+            <img class="logo" src="img/clients/client-4.png" alt="cliente4" />
+          </div>
+          <div class="tarjeta">
+            <img class="logo" src="img/clients/client-5.png" alt="cliente5" />
+          </div>
+          <div class="tarjeta">
+            <img class="logo" src="img/clients/client-6.png" alt="cliente6" />
+          </div>
+          <div class="tarjeta">
+            <img class="logo" src="img/clients/client-7.png" alt="cliente7" />
+          </div>
+          <div class="tarjeta">
+            <img class="logo" src="img/clients/client-8.png" alt="cliente8" />
+          </div>
         </div>
       </section>
 
@@ -592,30 +604,34 @@
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
           >
           </iframe>
-          <div class="datos">
-            <div class="direccion">
-              <i class="fa fa-map-marker icono1 a" aria-hidden="true"></i>
-              <p>A108 Adam Street, NY 535022</p>
-            </div>
-            <div class="email">
-              <i class="fa fa-envelope icono1 b" aria-hidden="true"></i>
-              <p>info@example.com</p>
-            </div>
-            <div class="telefono">
-              <i class="fa fa-phone icono1 c" aria-hidden="true"></i>
-              <p>+1 5589 55488 55</p>
-            </div>
-          </div>
-          <div class="form">
-            <form>
-              <input type="text" placeholder="Your Name" />
-              <input type="email" placeholder="Your Email" />
-              <input type="text" placeholder="Subject" />
-              <textarea placeholder="Message" rows="5"></textarea>
-              <div class="boton">
-                <button type="submit" class="btn btn1">Send Message</button>
+          <div class="datos-wrapper">
+            <div class="datos">
+              <div class="direccion">
+                <i class="fa fa-map-marker icono1 a" aria-hidden="true"></i>
+                <p>A108 Adam Street, NY 535022</p>
               </div>
-            </form>
+              <div class="email">
+                <i class="fa fa-envelope icono1 b" aria-hidden="true"></i>
+                <p>info@example.com</p>
+              </div>
+              <div class="telefono">
+                <i class="fa fa-phone icono1 c" aria-hidden="true"></i>
+                <p>+1 5589 55488 55</p>
+              </div>
+            </div>
+            <div class="form">
+              <form>
+                <div class="nombremail">
+                  <input type="text" placeholder="Your Name" />
+                  <input type="email" placeholder="Your Email" />
+                </div>
+                <input type="text" placeholder="Subject" />
+                <textarea placeholder="Message" rows="5"></textarea>
+                <div class="boton">
+                  <button type="submit" class="btn btn1">Send Message</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </section>
@@ -647,30 +663,32 @@
               <li><a class="u-link" href="#">Privacy policy</a></li>
             </ul>
           </div>
-          <div class="contact-us">
-            <h4 class="subtitulo-links">CONTACT US</h4>
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p>United States</p>
-            <p>Phone: +1 5589 55488 55</p>
-            <p>Email: info@example.com</p>
-          </div>
-          <div class="redes-sociales">
-            <a href="#" class=" circle ">
-              <i class="fa fa-twitter twitter" aria-hidden="true"></i>
-            </a>
-            <a href="#" class=" circle ">
-              <i class="fa fa-facebook facebook" aria-hidden="true"></i>
-            </a>
-            <a href="#" class=" circle ">
-              <i class="fa fa-instagram instagram" aria-hidden="true"></i>
-            </a>
-            <a href="#" class=" circle ">
-              <i class="fa fa-google-plus google" aria-hidden="true"></i>
-            </a>
-            <a href="#" class=" circle ">
-              <i class="fa fa-linkedin linkedin" aria-hidden="true"></i>
-            </a>
+          <div class="contactredes">
+            <div class="contact-us">
+              <h4 class="subtitulo-links">CONTACT US</h4>
+              <p>A108 Adam Street</p>
+              <p>New York, NY 535022</p>
+              <p>United States</p>
+              <p>Phone: +1 5589 55488 55</p>
+              <p>Email: info@example.com</p>
+            </div>
+            <div class="redes-sociales">
+              <a href="#" class=" circle ">
+                <i class="fa fa-twitter twitter" aria-hidden="true"></i>
+              </a>
+              <a href="#" class=" circle ">
+                <i class="fa fa-facebook facebook" aria-hidden="true"></i>
+              </a>
+              <a href="#" class=" circle ">
+                <i class="fa fa-instagram instagram" aria-hidden="true"></i>
+              </a>
+              <a href="#" class=" circle ">
+                <i class="fa fa-google-plus google" aria-hidden="true"></i>
+              </a>
+              <a href="#" class=" circle ">
+                <i class="fa fa-linkedin linkedin" aria-hidden="true"></i>
+              </a>
+            </div>
           </div>
           <div class="newsletter">
             <h4 class="subtitulo-links">OUR NEWSLETTER</h4>
