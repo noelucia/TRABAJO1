@@ -1,19 +1,96 @@
-.team{ 
-    p{
-       font-family: $font-texto;
-       color: $font-color-p-cabecera;
-       text-align: center;
-       font-size: $fontsize-sm;
-       line-height: 1.5;
-       padding: $padding-general;
+@import "../common/mixins";
+#team {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding: $padding-general;
+}
+.contenedort {
+  p {
+    font-family: $font-texto;
+    color: $font-color-p-cabecera;
+    text-align: center;
+    font-size: $fontsize-sm;
+    line-height: 1.5;
+    padding-bottom: 60px;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    color: $color-textitos;
+  }
+  .teams {
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      flex-flow: row wrap;
+      flex-direction: row;
+      justify-content: center;
+    }
+    @include laptop {
+      flex-direction: row;
+    }
+
+    .team1 {
+      margin: 20px;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      @include tablet {
+        width: 40%;
+      }
+      @include laptop {
+        width: 20%;
+      }
+      .overlay {
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: 0.5s ease;
+        background-color: rgba(0, 66, 137, 0.5);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        z-index: 1;
+        position: absolute;
+        overflow: hidden;
+        border-radius: 50%;
+
+        h2 {
+          font-family: $font-title;
+          font-size: 22px;
+          color: #ffffff;
+          margin-bottom: 0;
+        }
+        span {
+          font-family: $font-texto;
+          font-size: $fontsize-sm;
+          color: #ffffff;
+          margin-bottom: 10px;
+          font-style: italic;
+        }
+      .iconoschiquitos{
+        color: #ffffff;
+       .iconaso{
+        font-size: 18px;
+        margin: 0 2px;
+       }
+      
+      }
+      }
+      &:hover  .overlay {
+        opacity: 1;
+      }
+
+      .batman {
+        display: block;
+        max-width: 100%;
+        width: auto;
+        height: auto;
+        border-radius: 50%;
+      }
       
     }
-   .team1{
-     margin:20px;
-         .batman{
-          height:340px;
-          border-radius: 175px;
-         max-width: 118%;
-          }
-}
+  }
 }

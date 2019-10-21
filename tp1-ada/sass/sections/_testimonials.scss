@@ -1,11 +1,57 @@
-#testimonials{
-    background: $another-back-color;
-}
-.wason{
-    width: 120px;
-    border-radius: 50%;
-    max-width: 100%;
-    border: 4px solid #ffffff;
+@import "../common/mixins";
 
+#testimonials {
+  background: $another-back-color;
+  text-align: center;
+  padding: $padding-general;
+  padding-bottom: 60px;
+  padding-top: 60px;
+  .testimonial-wrapper {
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      flex-direction: row;
+      justify-content: center;
+    }
 
+    .contenedor {
+      .wason {
+        width: 120px;
+        border-radius: 50%;
+        max-width: 100%;
+        border: 4px solid #ffffff;
+        display: block;
+        align-items: center;
+        margin: auto;
+        float: none;
+      }
+    }
+    .testimonios {
+      display: flex;
+      flex-direction: column;
+      @include tablet {
+        width: 50%;
+        text-align: justify;
+        margin-left: 20px;
+      }
+      h4 {
+        font-family: $font-title;
+        margin: 10px 0 5px 0;
+      }
+      h5 {
+        font-family: $font-title;
+        color: #999;
+        font-size: $fontsize-sm;
+        margin: 0 0 15px 0;
+        font-weight: $font-weight-texto;
+      }
+      p {
+        font-style: italic;
+        font-family: $font-texto;
+        font-size: 16px;
+        margin: 0 15px 0 0;
+        color: $color-textitos;
+      }
+    }
+  }
 }

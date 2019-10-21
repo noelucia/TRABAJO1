@@ -1,3 +1,4 @@
+@import "../common/mixins";
 .cardb {
   background-color: #00458f;
   padding: 20px;
@@ -7,8 +8,14 @@
   position: relative;
   display: flex;
   align-items: center;
-
   flex-direction: column;
+  &:hover{
+    background-color: #003b7a;
+  }
+  @include laptop {
+    width: 33%;
+  }
+
   .iconos2 {
     font-size: 50px;
     color: $choose-text-color;

@@ -1,37 +1,48 @@
+@import "../common/mixins";
+
 #header {
   width: 100%;
   background-color: #ffffff;
   left: 0;
   height: 60px;
   top: 0;
-  z-index: 1;
+  z-index: 900;
   position: fixed;
+  padding: 10px 0;
+  @include laptop {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
   .header-container {
     display: flex;
     flex-direction: row;
+    width: 360px;
+    box-sizing: border-box;
+    margin: 0;
+    justify-content: space-between;
+    padding: 10px 15px;
+    align-items: center;
+    @include laptop {
+      width: unset;
+    }
     img {
-      width: 70px;
-      height: auto;
+      max-height: 30px;
       left: 0;
       margin-left: 10px;
-      padding: 15px;
     }
     .btn {
       display: flex;
       flex-direction: row;
-      font-size: 40px;
+      font-size: 30px;
       color: black;
+      .cross {
+        color: #ffffff;
+        display: none;
+      }
     }
-    .checkbox {
-      display: flex;
-      padding: 5px 5px;
-      justify-content: center;
-      display: none;
-    }
-  }
-
-  .nav-menu {
-    display: none;
   }
 
   .sidebar {
@@ -41,55 +52,183 @@
     z-index: 999;
     position: fixed;
     top: 0;
-    left: 0;
     bottom: 0;
     font-size: $fontsize-sm;
-    max-width: 0;
+    left: -240px;
+    width: 240px;
+    opacity: 0;
     transition: all 0.75s ease;
     background: rgba(19, 39, 57, 0.8);
     overflow: hidden;
 
-    .sidenav {
+    @include laptop {
+      position: relative;
+      display: flex;
+      flex-direction: row;
+      opacity: 1;
+      transition: unset;
+      overflow: unset;
+      left: unset;
+      bottom: unset;
+      top: unset;
+      background: none;
+      color: #00458f;
+      width: unset;
+      font-family: $font-title;
+      font-weight: $font-weight-subtitulos;
+    }
 
+    .sidenav {
       .side-menu {
         display: flex;
         flex-direction: column;
         padding: 10px;
         padding-top: 20px;
         box-sizing: border-box;
+        @include laptop {
+          display: flex;
+          flex-direction: row;
+          padding-top: 10px;
+        }
 
         .link {
           padding: 10px;
+          cursor: pointer;
+          text-decoration: none;
+          color: #ffffff;
+          &:hover {
+            color: $color-button-icon;
+          }
+          @include laptop {
+            display: block;
+            color: #00458f;
+            
+          }
         }
         .dropdown {
-          padding: 10px;
-          padding-top: 0;
-          p {
-            margin-block-start: 0;
-            margin-block-end: 0;
+          padding: 0 10px 10px 10px;
+          @include laptop {
+            padding-top: inherit;
+            padding-left: 0;
+            padding-right: 0;
+            cursor: pointer;
           }
-          .dropdown-content {
+
+          label {
             display: flex;
-            flex-direction: column;
-            .dropdown-submenu {
-              display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-end;
+            cursor: pointer;
+            &:hover {
+              color: $color-button-icon;
             }
-            .deepdropdown-menu {
-              display: flex;
-              flex-direction: column;
-              padding: 10px;
-              box-sizing: border-box;
-              .linkdeep{
-                padding: 10px;
-              }
+            @include laptop {
+              justify-content: space-evenly;
+              align-items: inherit;
             }
+          }
+          p,
+          .arrow {
+            margin-block-end: 0;
+            display: flex;
+            justify-content: space-between;
+            margin-inline-start: 0px;
+            margin-inline-end: 0px;
           }
         }
       }
     }
   }
+  .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.75s ease;
+    @include laptop {
+      display: none;
+      position: absolute;
+      background: #ffffff;
+      overflow: visible;
+      padding: 10px;
+      margin-top: 10px;
+      box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    }
+  }
+  .overlay {
+    background: rgba(19, 39, 57, 0.8);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 910;
+    display: none;
+    @include laptop {
+      background: none;
+    }
+  }
 }
-#check-box2:checked + .sidebar {
-  max-width: 240px;
-  
+.header-container > label > .hamburguesa {
+  @include laptop {
+    display: none;
+  }
+}
+.checkbox,
+.checkbox2 {
+  display: flex;
+  padding: 5px 0px;
+  justify-content: center;
+  display: none;
+}
+
+#check-box:checked ~ .sidebar {
+  left: 0;
+  opacity: 1;
+}
+
+#check-box:checked ~ .overlay {
+  display: block;
+}
+
+#check-box:checked ~ .header-container > label > .cross {
+  display: flex;
+  z-index: 914;
+  @include laptop {
+    display: none;
+  }
+}
+
+#check-box:checked ~ .header-container > label > .hamburguesa {
+  display: none;
+}
+
+#downarrow:checked + div {
+  max-height: 500px; /* "auto" */
+  display: flex;
+}
+
+#downarrow:checked + div {
+  max-height: 500px; /* "auto" */
+  display: flex;
+}
+
+#downarrow2:checked + div {
+  max-height: 500px; /* "auto" */
+  display: flex;
+}
+
+@include laptop {
+  #header .dropdown-content > .dropdown > .dropdown-content {
+    position: absolute;
+    left: 135px;
+    top: 44;
+  }
+}
+
+@include laptop {
+  .side-menu > * {
+    margin: 0 20px;
+  }
 }

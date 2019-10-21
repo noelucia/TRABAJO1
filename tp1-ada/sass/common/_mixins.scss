@@ -1,20 +1,15 @@
-@mixin celulares{
-    @media(min-width:320px){
-        @content;
-    }
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
 }
-@mixin tablet{
-    @media(min-width:768px){
-        @content;
-    }
+@mixin laptop {
+  @media (min-width: 1025px) {
+    @content;
+  }
 }
-@mixin laptops{
-    @media(min-width:1025px){
-        @content;
-    }
-}
-@mixin Desktops{
-    @media(min-width:1281px){
-        @content;
-    }
+@mixin desktop {
+  @media (min-width: 1281px) {
+    @content;
+  }
 }

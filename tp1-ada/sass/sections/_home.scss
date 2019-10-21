@@ -1,4 +1,4 @@
-
+@import "../common/mixins";
 
 #home {
   //border: 1px solid black;
@@ -13,11 +13,23 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include laptop {
+      flex-direction: row-reverse;
+      padding: 60px 0;
+    }
 
     .hero-image {
       max-width: 80%;
       height: auto;
       margin-top: 35px;
+      @include laptop {
+        max-width: 50%;
+      }
+    }
+    .hero-text {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
   }
   h1 {
@@ -27,6 +39,9 @@
     text-align: center;
     padding: 0px 20px;
     word-wrap: break-word;
+    @include laptop {
+      font-size: 50px;
+    }
     span {
       color: #74b5fc;
       text-decoration: underline;
@@ -35,6 +50,9 @@
   .botones {
     flex-direction: column;
     display: flex;
+    @include laptop {
+      flex-direction: row;
+    }
     .btn {
       display: inline-block;
       padding: 10px 32px;
@@ -52,11 +70,19 @@
     }
     .btn1 {
       border: 2px solid $color-button-icon;
-
       background-color: $color-button-icon;
+      &:hover {
+        background: none;
+        border-color: #fff;
+        color: #fff;
+      }
     }
     .btn2 {
       border: 2px solid #ffffff;
+      &:hover {
+        border: 2px solid $color-button-icon;
+        background-color: $color-button-icon;
+      }
     }
   }
 }

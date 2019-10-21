@@ -1,32 +1,78 @@
+@import "../common/mixins";
 #about-us {
   padding: $padding-general;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @include laptop {
+    margin-right: 80px;
+    margin-left: 80px;
+  }
   .texto {
     font-family: $font-texto;
     font-size: $fontsize-reg;
     line-height: 20px;
     text-align: center;
     padding: 0px 0px 50px;
-  }
-  .gente {
-    img {
-      width: 360px;
-      height: 250px;
-      vertical-align: middle;
+    color: $color-textitos;
+    @include laptop {
+      width: 50%;
     }
   }
   .general {
-    article {
-      .primero {
-        text-align: left;
-        font-family: $font-texto;
-        font-size: $fontsize-reg;
-        line-height: 24px;
+    @include laptop {
+      margin-right: auto;
+      margin-left: auto;
+      width: 100%;
+    }
+    .todoprimero {
+      display: flex;
+      flex-direction: column;
+      @include laptop {
+        display: flex;
+        flex-direction: row-reverse;
+      }
+      .gente {
+        img {
+          width: 100%;
+          height: auto;
+          vertical-align: middle;
+          box-sizing: border-box;
+          @include laptop {
+            width: 100%;
+          }
+        }
+      }
+      .wrapgente {
+        @include laptop {
+          width: 100%;
+          padding: 0 15px;
+        }
+        article {
+          .primero {
+            text-align: left;
+            font-family: $font-texto;
+            font-size: $fontsize-reg;
+            line-height: 24px;
+            color: $color-textitos;
+            margin-bottom: 30px;
+          }
+        }
       }
     }
   }
 
+  .Eiusmod {
+    padding: 0px 0px 30px 0px;
+    background-size: cover;
+    &:hover .icono {
+      background-color: $color-button-icon;
+      .fa {
+        color: $inactive-button;
+      }
+    }
+  }
 
- .icono{
+  .icono {
     border-radius: 50%;
     height: 55px;
     width: 55px;
@@ -34,88 +80,78 @@
     float: left;
     border: 2px solid #007bff;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
-.fa{
-    font-size: 25px;
-    color: #007bff;
-    display: inline-block;
+    .fa {
+      font-size: 25px;
+      color: #007bff;
+      display: inline-block;
     }
   }
 }
 
+.ei {
+  font-family: $font-title;
+  font-weight: $font-weight-subtitulos;
+  font-size: 18px;
+  margin: 0px 0 5px 80px;
+}
 
-.Ei {
-    font-family: $font-title;
-    font-weight: $font-weight-subtitulos;
-    margin: 0px 0px 0px 81px;
-    font-size: 15px;
-  }
 .segundo {
-     display: inline-block;
-     text-align: left;
-     font-weight: $font-weight-texto;
-     font-family: $font-texto;
-     font-size: $fontsize-sm;
-     padding: 0px 24px 33px 81px;
-     margin: -39px 0px 0px 0px;
-     line-height: 24px;
-  }
+  text-align: left;
+  font-weight: $font-weight-texto;
+  font-family: $font-texto;
+  font-size: $fontsize-sm;
+  line-height: 24px;
+  color: $color-textitos;
+  margin: 0px 0px 0px 80px;
+}
 
-    
-.Mag {
-     font-family: $font-title;
-     font-weight: $font-weight-subtitulos;
-     margin: 0px 0px 0px 81px;
-     font-size: 15px;
+.general2 {
+  display: flex;
+  flex-direction: column;
+  @include laptop {
+    display: flex;
+    flex-direction: row;
+    padding-top: 60px;
   }
- .tercero{
-    display: inline-block;
-    text-align: left;
-    font-weight: $font-weight-texto;
-    font-family: $font-texto;
-    font-size: $fontsize-sm;
-    padding: 0px 24px 33px 81px;
-    margin: -39px 0px 0px 0px;
-    line-height: 24px;
-  }
-      
-.Dol{
-   font-family: $font-title;
-   font-weight: $font-weight-subtitulos;
-   margin: 0px 0px 0px 81px;
-  font-size: 15px;
- }
- .cuarto{
-   display: inline-block;
-   text-align: left;
-   font-weight: $font-weight-texto;
-   font-family: $font-texto;
-   font-size: $fontsize-sm;
-   padding: 0px 24px 33px 81px;
-   margin: -39px 0px 0px 0px;
-   line-height: 24px;
- }
-.general2{
+  .chica {
     img {
-      width: 360px;
-      height: 250px;
+      width: 100%;
+      height: auto;
       vertical-align: middle;
-      padding: $padding-general;
+      box-sizing: border-box;
+      @include laptop {
+        width: 100%;
+        padding: 0 15px;
       }
-        
-    .Sub{
-      padding: $padding-general;
+    }
+  }
+  .todosegundo {
+    @include laptop {
+      padding: 0 15px;
+      max-width: 46%;
+    }
+    
+    }
+
+    .Sub {
       font-family: $font-texto;
       font-weight: $font-weight-subtitulos;
       color: $font-color-sub-aboutus;
-      }
-    .dos{
-      padding: $padding-general;
-      font-family:  $font-texto;
+    }
+    .dos {
+      font-family: $font-texto;
       font-size: 16px;
-      }
-
-}
+      color: $color-textitos;
+      margin-bottom: 30px;
+    }
+  }
+  .reverse {
+    @include laptop {
+      flex-direction: row-reverse;
+      justify-content: flex-start;
+      padding-top: 60px;
+    }
+  }

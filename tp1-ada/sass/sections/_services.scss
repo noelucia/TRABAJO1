@@ -1,12 +1,16 @@
-#services{
-    background-color: $another-back-color;
-    .cabecera{
-        p{
-            padding-bottom: 60px;
-           
-        }
+#services {
+  background-color: $another-back-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  .cabecera {
+    p {
+      padding-bottom: 60px;
     }
-    .card-container{
-        padding:$padding-general;
-    }
+  }
+  .card-container {
+    padding: 3px 15px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
 }

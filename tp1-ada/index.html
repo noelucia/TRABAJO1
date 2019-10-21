@@ -3,6 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <meta name="viewport" content="width=device-width, user-scalable=no"> -->
+
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" type="text/css" href="estilos/estilos.css" />
     <!-- le saque la barra de adelante porque no mostraba los cambios -->
@@ -34,85 +36,68 @@
 
 ======================================-->
 
-    <header id="header" class="fixed">
+    <header id="header">
+      <input type="checkbox" name="checkbox" class="checkbox" id="check-box" />
       <div class="header-container">
         <img src="img/logo.png" />
         <label for="check-box" class="btn">
           <i class="fa fa-bars  hamburguesa" aria-hidden="true"></i>
+          <i class="fa fa-times cross" aria-hidden="true"></i>
         </label>
-
-        <input
-          type="checkbox"
-          name="checkbox"
-          class="checkbox"
-          id="check-box"
-        />
       </div>
-      <nav>
-        <div class="nav-menu">
-          <a>Home</a>
-          <a>About Us</a>
-          <a>Services</a>
-          <a>Portfolio</a>
-          <a>Team</a>
-          <div class="dropdown">
-            <a>Drop down</a>
-            <div class="dropdown-content">
-              <p>Drop Down 1</p>
-              <div class="dropdown-submenu">
-                <p>Drop Down 2</p>
-              </div>
-              <div class="deepdropdown-menu">
-                <!-- se puede hacer un div qué contenga todo en vez de ul y li, un div con a adentro-->
-                <a>Deep DropDown 1</a>
-                <a>Deep DropDown 2</a>
-                <a>Deep DropDown 3</a>
-                <a>Deep DropDown 4</a>
-                <a>Deep DropDown 5</a>
-              </div>
-              <a>Drop Down 3</a>
-              <a>Drop Down 4</a>
-              <a>Drop Down 5</a>
-            </div>
-            <a>Contact Us</a>
-          </div>
-        </div>
-      </nav>
-      <label for="check-box2" class="btn2">
-        <i class="fa fa-bars  hamburguesa" aria-hidden="true"></i>
-      </label>
-      <input type="checkbox" name="checkbox" class="checkbox" id="check-box2" />
+
       <div class="sidebar">
         <nav class="sidenav">
           <div class="side-menu">
-            <a class="link">Home</a>
-            <a class="link">About Us</a>
-            <a class="link">Services</a>
-            <a class="link">Portfolio</a>
-            <a class="link">Team</a>
+            <a class="link" href="#home">Home</a>
+            <a class="link" href="#about-us">About Us</a>
+            <a class="link" href="#services">Services</a>
+            <a class="link" href="#portfolio">Portfolio</a>
+            <a class="link" href="#team">Team</a>
+
             <div class="dropdown">
-              <p>Drop down</p>
+              <label for="downarrow">
+                <span>Drop down</span>
+                <i class="fa fa-sort-desc arrow" aria-hidden="true"></i>
+              </label>
+              <input
+                type="checkbox"
+                name="downarrow"
+                class="checkbox2"
+                id="downarrow"
+              />
+
               <div class="dropdown-content">
-                <p>Drop Down 1</p>
-                <div class="dropdown-submenu">
-                  <p>Drop Down 2</p>
-                </div>
-                <div class="deepdropdown-menu">
-                  <a class="linkdeep">Deep DropDown 1</a>
-                  <a class="linkdeep">Deep DropDown 2</a>
-                  <a class="linkdeep">Deep DropDown 3</a>
-                  <a class="linkdeep">Deep DropDown 4</a>
-                  <a class="linkdeep">Deep DropDown 5</a>
+                <a class="link">Drop Down 1</a>
+                <div class="dropdown">
+                  <label for="downarrow2">
+                    <span>Drop Down 2</span>
+                    <i class="fa fa-sort-desc arrow" aria-hidden="true"></i>
+                  </label>
+                  <input
+                    type="checkbox"
+                    name="downarrow2"
+                    class="checkbox2"
+                    id="downarrow2"
+                  />
+                  <div class="dropdown-content">
+                    <a class="link">Deep DropDown 1</a>
+                    <a class="link">Deep DropDown 2</a>
+                    <a class="link">Deep DropDown 3</a>
+                    <a class="link">Deep DropDown 4</a>
+                    <a class="link">Deep DropDown 5</a>
+                  </div>
                 </div>
                 <a class="link">Drop Down 3</a>
                 <a class="link">Drop Down 4</a>
                 <a class="link">Drop Down 5</a>
               </div>
             </div>
-            <a class="link">Contact Us</a>
+            <a class="link" href="#contact">Contact Us</a>
           </div>
         </nav>
       </div>
+      <div class="overlay"></div>
     </header>
 
     <!-- =================================== 
@@ -124,10 +109,12 @@
       <section id="home">
         <div class="home-container">
           <img class="hero-image" src="img/intro-img.svg" />
-          <h1>We provide <span>solutions</span> for your business</h1>
-          <div class="botones">
-            <a href="#about-us" class="btn btn1">Get Started</a>
-            <a href="#services" class="btn btn2">Our Services</a>
+          <div class="hero-text">
+            <h1>We provide <span>solutions</span> for your business</h1>
+            <div class="botones">
+              <a href="#about-us" class="btn btn1">Get Started</a>
+              <a href="#services" class="btn btn2">Our Services</a>
+            </div>
           </div>
         </div>
       </section>
@@ -146,50 +133,61 @@
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
         </header>
-        <div class="gente">
-          <img src="img/about-img.svg" alt="gente" />
-        </div>
         <div class="general">
-          <article>
-            <p class="primero"> 
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-          </article>
-          <div class="Eiusmod">
-            <div class="icono">
-            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+          <div class="todoprimero">
+            <div class="gente">
+              <img src="img/about-img.svg" alt="gente" />
             </div>
-            <h4 class="Ei">Eiusmod Tempor</h4>
-            <p class="segundo">
-              Et harum quidem rerum facilis est et expedita distinctio. Nam
-              libero tempore, cum soluta nobis est eligendi
-            </p>
-          </div>
-            <div class="icono">
-              <i class="fa fa-picture-o" aria-hidden="true"></i>
-          </div>
-            <h2 class="Mag">Magni Dolores</h2>
-            <p class="tercero"> 
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-              officia deserunt mollit anim id est laborum
-            </p>
-          </div>
-            <div class="icono">
-              <i class="fa fa-bar-chart" aria-hidden="true"></i>
-          </div>
-            <h2 class="Dol">Dolor Sitema</h2>
-            <p class="cuarto">
-              Minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-              aliquip ex ea commodo consequat tarad limino ata
-            </p>
+            <div class="wrapgente">
+              <article>
+                <p class="primero">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, do
+                  eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                  enim ad minim veniam, quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat.
+                </p>
+              </article>
+              <div class="Eiusmod">
+                <div class="icono">
+                  <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                </div>
+                <div>
+                  <h4 class="ei">Eiusmod Tempor</h4>
+                  <p class="segundo">
+                    Et harum quidem rerum facilis est et expedita distinctio.
+                    Nam libero tempore, cum soluta nobis est eligendi
+                  </p>
+                </div>
+              </div>
+              <div class="Eiusmod">
+                <div class="icono">
+                  <i class="fa fa-picture-o" aria-hidden="true"></i>
+                </div>
+                <h4 class="ei">Magni Dolores</h4>
+                <p class="segundo">
+                  Excepteur sint occaecat cupidatat non proident, sunt in culpa
+                  qui officia deserunt mollit anim id est laborum
+                </p>
+              </div>
+              <div class="Eiusmod">
+                <div class="icono">
+                  <i class="fa fa-bar-chart" aria-hidden="true"></i>
+                </div>
+                <h4 class="ei">Dolor Sitema</h4>
+                <p class="segundo">
+                  Minim veniam, quis nostrud exercitation ullamco laboris nisi
+                  ut aliquip ex ea commodo consequat tarad limino ata
+                </p>
+              </div>
+            </div>
           </div>
         </div>
+
         <div class="general2">
+          <div class="chica">
             <img src="img/about-extra-1.svg" alt="chica" />
-          <div>
+          </div>
+          <div class="todosegundo">
             <h2 class="Sub">
               Voluptatem dignissimos provident quasi corporis voluptates sit
               assumenda.
@@ -208,28 +206,32 @@
             </p>
           </div>
         </div>
-        <div class="general2">
-          <img src="img/about-extra-2.svg" alt= "grupo">
-          <h2 class="Sub">
-            Neque saepe temporibus repellat ea ipsum et. Id vel et quia tempora
-            facere reprehenderit.
-          </h2>
-          <p class="dos">
-            Delectus alias ut incidunt delectus nam placeat in consequatur. Sed
-            cupiditate quia ea quis. Voluptas nemo qui aut distinctio. Cumque
-            fugit earum est quam officiis numquam. Ducimus corporis autem at
-            blanditiis beatae incidunt sunt.
-          </p>
-          <p class="dos">
-            Voluptas saepe natus quidem blanditiis. Non sunt impedit voluptas
-            mollitia beatae. Qui esse molestias. Laudantium libero nisi vitae
-            debitis. Dolorem cupiditate est perferendis iusto.
-          </p>
-          <p class="dos">
-            Eum quia in. Magni quas ipsum a. Quis ex voluptatem inventore sint
-            quia modi. Numquam est aut fuga mollitia exercitationem nam
-            accusantium provident quia.
-          </p>
+        <div class="general2 reverse">
+          <div class="chica">
+            <img src="img/about-extra-2.svg" alt="grupo" />
+          </div>
+          <div class="todosegundo">
+            <h2 class="Sub">
+              Neque saepe temporibus repellat ea ipsum et. Id vel et quia
+              tempora facere reprehenderit.
+            </h2>
+            <p class="dos">
+              Delectus alias ut incidunt delectus nam placeat in consequatur.
+              Sed cupiditate quia ea quis. Voluptas nemo qui aut distinctio.
+              Cumque fugit earum est quam officiis numquam. Ducimus corporis
+              autem at blanditiis beatae incidunt sunt.
+            </p>
+            <p class="dos">
+              Voluptas saepe natus quidem blanditiis. Non sunt impedit voluptas
+              mollitia beatae. Qui esse molestias. Laudantium libero nisi vitae
+              debitis. Dolorem cupiditate est perferendis iusto.
+            </p>
+            <p class="dos">
+              Eum quia in. Magni quas ipsum a. Quis ex voluptatem inventore sint
+              quia modi. Numquam est aut fuga mollitia exercitationem nam
+              accusantium provident quia.
+            </p>
+          </div>
         </div>
       </section>
 
@@ -241,7 +243,7 @@
 
       <section id="services">
         <header class="cabecera">
-          <h2 class="titulo">Services</h2><
+          <h2 class="titulo">Services</h2>
           <p>
             Laudem latine persequeris id sed, ex fabulas delectus quo. No vel
             partiendo abhorreant vituperatoribus.
@@ -377,23 +379,23 @@
               <p class="readMore">Read More</p>
             </article>
           </div>
-          <div class="countdown">
-            <div>
-              <p class="numeros">274</p>
-              <p>Clients</p>
-            </div>
-            <div>
-              <p class="numeros">421</p>
-              <p>Projects</p>
-            </div>
-            <div>
-              <p class="numeros">1364</p>
-              <p>Hours of Support</p>
-            </div>
-            <div>
-              <p class="numeros">18</p>
-              <p>Hard Workers</p>
-            </div>
+        </div>
+        <div class="countdown">
+          <div>
+            <p class="numeros">274</p>
+            <p>Clients</p>
+          </div>
+          <div>
+            <p class="numeros">421</p>
+            <p>Projects</p>
+          </div>
+          <div>
+            <p class="numeros">1364</p>
+            <p>Hours of Support</p>
+          </div>
+          <div>
+            <p class="numeros">18</p>
+            <p>Hard Workers</p>
           </div>
         </div>
       </section>
@@ -414,32 +416,133 @@
           <div class="boton Card">CARD</div>
           <div class="boton web">WEB</div>
         </div>
-        <div class="imagen">
-          <img  class="celular" src="img/portfolio/app1.jpg" alt="celular" width="100%" />
-        </div>
-        <div class="imagen">
-          <img class="compu" src="img/portfolio/web3.jpg" alt="compu" />
-        </div>
-        <div class="imagen">
-          <img class="cel" src="img/portfolio/app2.jpg" alt="cel" />
-        </div>
-        <div class="imagen">
-          <img class="berlin" src="img/portfolio/card2.jpg" alt="card" />
-        </div>
-        <div class="imagen">
-          <img class="web" src="img/portfolio/web2.jpg" alt="notebook" />
-        </div>
-        <div class="imagen">
-          <img class="manos" src="img/portfolio/app3.jpg" alt="cel" />
-        </div>
-        <div class="imagen">
-          <img class="thank" src="img/portfolio/card1.jpg" alt="Thank you" />
-        </div>
-        <div class="imagen">
-          <img class="tarjetas" src="img/portfolio/card3.jpg" alt="tarjetas" />
-        </div>
-        <div class="imagen">
-          <img class="tablet" src="img/portfolio/web1.jpg" alt="web" />
+        <div class="card-wrapper">
+          <div class="imagen celular">
+            <div class="overlay">
+              <h2>App 1</h2>
+              <span>APP</span>
+              <div class="iconoscirculo">
+                <div class="circulito">
+                  <i class="fa fa-eye iconito" aria-hidden="true"></i>
+                </div>
+                <div class="circulito">
+                  <i class="fa fa-external-link iconito" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="imagen compu">
+            <div class="overlay">
+              <h2>App 1</h2>
+              <span>APP</span>
+              <div class="iconoscirculo">
+                <div class="circulito">
+                  <i class="fa fa-eye iconito" aria-hidden="true"></i>
+                </div>
+                <div class="circulito">
+                  <i class="fa fa-external-link iconito" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="imagen cel ">
+            <div class="overlay">
+              <h2>App 1</h2>
+              <span>APP</span>
+              <div class="iconoscirculo">
+                <div class="circulito">
+                  <i class="fa fa-eye iconito" aria-hidden="true"></i>
+                </div>
+                <div class="circulito">
+                  <i class="fa fa-external-link iconito" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="imagen berlin">
+            <div class="overlay">
+              <h2>App 1</h2>
+              <span>APP</span>
+              <div class="iconoscirculo">
+                <div class="circulito">
+                  <i class="fa fa-eye iconito" aria-hidden="true"></i>
+                </div>
+                <div class="circulito">
+                  <i class="fa fa-external-link iconito" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="imagen web">
+            <div class="overlay">
+              <h2>App 1</h2>
+              <span>APP</span>
+              <div class="iconoscirculo">
+                <div class="circulito">
+                  <i class="fa fa-eye iconito" aria-hidden="true"></i>
+                </div>
+                <div class="circulito">
+                  <i class="fa fa-external-link iconito" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="imagen manos">
+            <div class="overlay">
+              <h2>App 1</h2>
+              <span>APP</span>
+              <div class="iconoscirculo">
+                <div class="circulito">
+                  <i class="fa fa-eye iconito" aria-hidden="true"></i>
+                </div>
+                <div class="circulito">
+                  <i class="fa fa-external-link iconito" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="imagen thank">
+            <div class="overlay">
+              <h2>App 1</h2>
+              <span>APP</span>
+              <div class="iconoscirculo">
+                <div class="circulito">
+                  <i class="fa fa-eye iconito" aria-hidden="true"></i>
+                </div>
+                <div class="circulito">
+                  <i class="fa fa-external-link iconito" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="imagen tarjetas">
+            <div class="overlay">
+              <h2>App 1</h2>
+              <span>APP</span>
+              <div class="iconoscirculo">
+                <div class="circulito">
+                  <i class="fa fa-eye iconito" aria-hidden="true"></i>
+                </div>
+                <div class="circulito">
+                  <i class="fa fa-external-link iconito" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="imagen tablet">
+            <div class="overlay">
+              <h2>App 1</h2>
+              <span>APP</span>
+              <div class="iconoscirculo">
+                <div class="circulito">
+                  <i class="fa fa-eye iconito" aria-hidden="true"></i>
+                </div>
+                <div class="circulito">
+                  <i class="fa fa-external-link iconito" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -453,67 +556,20 @@
         <header class="cabecera">
           <h2 class="titulo">Testimonials</h2>
         </header>
-        <div class="contenedor">
-          <img class="wason" src="img/testimonial-1.jpg" alt="wason" />
+        <div class="testimonial-wrapper">
+          <div class="contenedor">
+            <img class="wason" src="img/testimonial-1.jpg" alt="wason" />
+          </div>
+          <div class="testimonios">
+            <h4>Saul Goodman</h4>
+            <h5>Ceo & Founder</h5>
+            <p>
+              Proin iaculis purus consequat sem cure digni ssim donec porttitora
+              entum suscipit rhoncus. Accusantium quam, ultricies eget id,
+              aliquam eget nibh et. Maecen aliquam, risus at semper.
+            </p>
+          </div>
         </div>
-        <div class=" testimonios">
-          <h4>Saul Goodman</h4>
-          <h5>Ceo & Founder</h5>
-          <p>
-            Proin iaculis purus consequat sem cure digni ssim donec porttitora
-            entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam
-            eget nibh et. Maecen aliquam, risus at semper.
-          </p>
-        </div>
-        <!-- <div class="contenedors">
-          <img src="img/testimonial-2.jpg" alt="sara" />
-        </div>
-        <div class=" testimonios2">
-          <h4>Sara Wilson</h4>
-          <h5>Designer</h5>
-          <p>
-            Export tempor illum tamen malis malis eram quae irure esse labore
-            quem cillum quid cillum eram malis quorum velit fore eram velit sunt
-            aliqua noster fugiat irure amet legam anim culpa.
-          </p>
-        </div>
-        <div class="contenedorj">
-          <img src="img/testimonial-3.jpg" alt="jena" />
-        </div>
-        <div class=" testimonios3">
-          <h4>Jena Karlis</h4>
-          <h5>Store Owner</h5>
-          <p>
-            Enim nisi quem export duis labore cillum quae magna enim sint quorum
-            nulla quem veniam duis minim tempor labore quem eram duis noster
-            aute amet eram fore quis sint minim.
-          </p>
-        </div>
-        <div class="contenedorm">
-          <img src="img/testimonial-4.jpg" alt="Matt" />
-        </div>
-        <div class=" testimonios4">
-          <h4>Matt Brandon</h4>
-          <h5>Freelancer</h5>
-          <p>
-            Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos
-            export minim fugiat minim velit minim dolor enim duis veniam ipsum
-            anim magna sunt elit fore quem dolore labore illum veniam.
-          </p>
-        </div>
-        <div class="contenedorjo">
-          <img src="img/testimonial-5.jpg" alt="john" />
-        </div>
-        <div class=" testimonios5">
-          <h4>John Larson</h4>
-          <h5>Entrepreneur</h5>
-          <p>
-            Quis quorum aliqua sint quem legam fore sunt eram irure aliqua
-            veniam tempor noster veniam enim culpa labore duis sunt culpa nulla
-            illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-          </p>
-        </div> 
-        *faltan botones*-->
       </section>
 
       <!-- =================================== 
@@ -526,24 +582,62 @@
         <header class="cabecera">
           <h2 class="titulo">Team</h2>
         </header>
-        <div class="contenedor team">
-          <div>
-            <p>
-              Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-              accusantium doloremque
-            </p>
-          </div>
-          <div class="Teams">
+        <div class="contenedort">
+          <p>
+            Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+            accusantium doloremque
+          </p>
+          <div class="teams">
             <div class="team1">
+              <div class="overlay">
+                <h2>Ben Affleck</h2>
+                <span>Chief Executive Officer</span>
+                <div class="iconoschiquitos">
+                  <i class="fa fa-twitter iconaso" aria-hidden="true"></i>
+                  <i class="fa fa-facebook iconaso" aria-hidden="true"></i>
+                  <i class="fa fa-google-plus iconaso" aria-hidden="true"></i>
+                  <i class="fa fa-linkedin iconaso" aria-hidden="true"></i>
+                </div>
+              </div>
               <img class="batman" src="img/team-01.jpg" alt="tema1" />
             </div>
             <div class="team1">
+              <div class="overlay">
+                <h2>Christian Bale</h2>
+                <span>Product Manager</span>
+                <div class="iconoschiquitos">
+                  <i class="fa fa-twitter iconaso" aria-hidden="true"></i>
+                  <i class="fa fa-facebook iconaso" aria-hidden="true"></i>
+                  <i class="fa fa-google-plus iconaso" aria-hidden="true"></i>
+                  <i class="fa fa-linkedin iconaso" aria-hidden="true"></i>
+                </div>
+              </div>
               <img class="batman" src="img/team-02.jpg" alt="tema2" />
             </div>
             <div class="team1">
+              <div class="overlay">
+                <h2>Michael Keaton</h2>
+                <span>CTO</span>
+                <div class="iconoschiquitos">
+                  <i class="fa fa-twitter iconaso" aria-hidden="true"></i>
+                  <i class="fa fa-facebook iconaso" aria-hidden="true"></i>
+                  <i class="fa fa-google-plus iconaso" aria-hidden="true"></i>
+                  <i class="fa fa-linkedin iconaso" aria-hidden="true"></i>
+                </div>
+              </div>
               <img class="batman" src="img/team-03.jpg" alt="tema3" />
             </div>
             <div class="team1">
+              <div class="overlay">
+                <h2>Adam West</h2>
+                <span>Accountant</span>
+                <div class="iconoschiquitos">
+                  <i class="fa fa-twitter iconaso" aria-hidden="true"></i>
+                  <i class="fa fa-facebook iconaso" aria-hidden="true"></i>
+                  <i class="fa fa-google-plus iconaso" aria-hidden="true"></i>
+                  <i class="fa fa-linkedin iconaso" aria-hidden="true"></i>
+                </div>
+              </div>
               <img class="batman" src="img/team-04.jpg" alt="tema4" />
             </div>
           </div>
@@ -559,34 +653,36 @@
       <section id="our-clients">
         <header class="cabecera">
           <h2 class="titulo">Our CLients</h2>
-          <p>
+          <p class="clientes">
             Sed ut perspiciatis unde omnis iste natus error sit voluptatem
             accusantium doloremque dere santome nida.
           </p>
         </header>
-        <div class="tarjeta">
-          <img class="logo" src="img/clients/client-1.png" alt="cliente1" />
-        </div>
-        <div class="tarjeta">
-          <img class="logo" src="img/clients/client-2.png" alt="cliente2" />
-        </div>
-        <div class="tarjeta">
-          <img class="logo" src="img/clients/client-3.png" alt="cliente3" />
-        </div>
-        <div class="tarjeta">
-          <img class="logo" src="img/clients/client-4.png" alt="cliente4" />
-        </div>
-        <div class="tarjeta">
-          <img class="logo" src="img/clients/client-5.png" alt="cliente5" />
-        </div>
-        <div class="tarjeta">
-          <img class="logo" src="img/clients/client-6.png" alt="cliente6" />
-        </div>
-        <div class="tarjeta">
-          <img class="logo" src="img/clients/client-7.png" alt="cliente7" />
-        </div>
-        <div class="tarjeta">
-          <img class="logo" src="img/clients/client-8.png" alt="cliente8" />
+        <div class="card-wrapper">
+          <div class="tarjeta">
+            <img class="logo" src="img/clients/client-1.png" alt="cliente1" />
+          </div>
+          <div class="tarjeta">
+            <img class="logo" src="img/clients/client-2.png" alt="cliente2" />
+          </div>
+          <div class="tarjeta">
+            <img class="logo" src="img/clients/client-3.png" alt="cliente3" />
+          </div>
+          <div class="tarjeta">
+            <img class="logo" src="img/clients/client-4.png" alt="cliente4" />
+          </div>
+          <div class="tarjeta">
+            <img class="logo" src="img/clients/client-5.png" alt="cliente5" />
+          </div>
+          <div class="tarjeta">
+            <img class="logo" src="img/clients/client-6.png" alt="cliente6" />
+          </div>
+          <div class="tarjeta">
+            <img class="logo" src="img/clients/client-7.png" alt="cliente7" />
+          </div>
+          <div class="tarjeta">
+            <img class="logo" src="img/clients/client-8.png" alt="cliente8" />
+          </div>
         </div>
       </section>
 
@@ -605,30 +701,34 @@
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621"
           >
           </iframe>
-          <div class="datos">
-            <div class="direccion">
-              <i class="fa fa-map-marker icono1 a" aria-hidden="true"></i>
-              <p>A108 Adam Street, NY 535022</p>
-            </div>
-            <div class="email">
-              <i class="fa fa-envelope icono1 b" aria-hidden="true"></i>
-              <p>info@example.com</p>
-            </div>
-            <div class="telefono">
-              <i class="fa fa-phone icono1 c" aria-hidden="true"></i>
-              <p>+1 5589 55488 55</p>
-            </div>
-          </div>
-          <div class="form">
-            <form>
-              <input type="text" placeholder="Your Name" />
-              <input type="email" placeholder="Your Email" />
-              <input type="text" placeholder="Subject" />
-              <textarea placeholder="Message" rows="5"></textarea>
-              <div class="boton">
-                <button type="submit" class="btn btn1">Send Message</button>
+          <div class="datos-wrapper">
+            <div class="datos">
+              <div class="direccion">
+                <i class="fa fa-map-marker icono1 a" aria-hidden="true"></i>
+                <p>A108 Adam Street, NY 535022</p>
               </div>
-            </form>
+              <div class="email">
+                <i class="fa fa-envelope icono1 b" aria-hidden="true"></i>
+                <p>info@example.com</p>
+              </div>
+              <div class="telefono">
+                <i class="fa fa-phone icono1 c" aria-hidden="true"></i>
+                <p>+1 5589 55488 55</p>
+              </div>
+            </div>
+            <div class="form">
+              <form>
+                <div class="nombremail">
+                  <input type="text" placeholder="Your Name" />
+                  <input type="email" placeholder="Your Email" />
+                </div>
+                <input type="text" placeholder="Subject" />
+                <textarea placeholder="Message" rows="5"></textarea>
+                <div class="boton">
+                  <button type="submit" class="btn btn1">Send Message</button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </section>
@@ -660,30 +760,32 @@
               <li><a class="u-link" href="#">Privacy policy</a></li>
             </ul>
           </div>
-          <div class="contact-us">
-            <h4 class="subtitulo-links">CONTACT US</h4>
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p>United States</p>
-            <p>Phone: +1 5589 55488 55</p>
-            <p>Email: info@example.com</p>
-          </div>
-          <div class="redes-sociales">
-            <a href="#" class=" circle ">
-              <i class="fa fa-twitter twitter" aria-hidden="true"></i>
-            </a>
-            <a href="#" class=" circle ">
-              <i class="fa fa-facebook facebook" aria-hidden="true"></i>
-            </a>
-            <a href="#" class=" circle ">
-              <i class="fa fa-instagram instagram" aria-hidden="true"></i>
-            </a>
-            <a href="#" class=" circle ">
-              <i class="fa fa-google-plus google" aria-hidden="true"></i>
-            </a>
-            <a href="#" class=" circle ">
-              <i class="fa fa-linkedin linkedin" aria-hidden="true"></i>
-            </a>
+          <div class="contactredes">
+            <div class="contact-us">
+              <h4 class="subtitulo-links">CONTACT US</h4>
+              <p>A108 Adam Street</p>
+              <p>New York, NY 535022</p>
+              <p>United States</p>
+              <p>Phone: +1 5589 55488 55</p>
+              <p>Email: info@example.com</p>
+            </div>
+            <div class="redes-sociales">
+              <a href="#" class=" circle ">
+                <i class="fa fa-twitter twitter" aria-hidden="true"></i>
+              </a>
+              <a href="#" class=" circle ">
+                <i class="fa fa-facebook facebook" aria-hidden="true"></i>
+              </a>
+              <a href="#" class=" circle ">
+                <i class="fa fa-instagram instagram" aria-hidden="true"></i>
+              </a>
+              <a href="#" class=" circle ">
+                <i class="fa fa-google-plus google" aria-hidden="true"></i>
+              </a>
+              <a href="#" class=" circle ">
+                <i class="fa fa-linkedin linkedin" aria-hidden="true"></i>
+              </a>
+            </div>
           </div>
           <div class="newsletter">
             <h4 class="subtitulo-links">OUR NEWSLETTER</h4>
@@ -699,10 +801,10 @@
           </div>
         </div>
         <div class="parte-inferior">
-          <p class="copyright">
+          <span class="copyright">
             © Copyright Wayne Enterprises. All Rights Reserved
-          </p>
-          <p class="designed">Designed by...</p>
+          </span>
+          <span class="designed">Designed by...</span>
         </div>
       </footer>
     </div>
