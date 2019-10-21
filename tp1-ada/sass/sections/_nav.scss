@@ -1,6 +1,5 @@
 @import "../common/mixins";
 
-
 #header {
   width: 100%;
   background-color: #ffffff;
@@ -10,9 +9,11 @@
   z-index: 900;
   position: fixed;
   padding: 10px 0;
-  @include laptop{
+  @include laptop {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
   }
 
   .header-container {
@@ -24,6 +25,9 @@
     justify-content: space-between;
     padding: 10px 15px;
     align-items: center;
+    @include laptop {
+      width: unset;
+    }
     img {
       max-height: 30px;
       left: 0;
@@ -41,7 +45,6 @@
     }
   }
 
-
   .sidebar {
     height: auto;
     font-family: $font-texto;
@@ -57,19 +60,20 @@
     transition: all 0.75s ease;
     background: rgba(19, 39, 57, 0.8);
     overflow: hidden;
-    @include laptop{
-      position:relative;
+    @include laptop {
+      position: relative;
       display: flex;
       flex-direction: row;
       opacity: 1;
       transition: unset;
       overflow: unset;
-      left:unset;
+      left: unset;
       bottom: unset;
-      top:unset;
-      background:none;
-      color:#00458f;
-
+      top: unset;
+      background: none;
+      color: #00458f;
+      width: unset;
+      font-family:$font-title;
     }
 
     .sidenav {
@@ -79,24 +83,43 @@
         padding: 10px;
         padding-top: 20px;
         box-sizing: border-box;
-        @include laptop{
+        @include laptop {
           display: flex;
           flex-direction: row;
-          padding-top:10px;
+          padding-top: 10px;
         }
 
         .link {
           padding: 10px;
+          cursor: pointer;
+          text-decoration: none;
+          color: #ffffff;
+          
+          @include laptop {
+            display: block;
+            color:#00458f;
+          }
         }
         .dropdown {
-          padding: 10px;
-          padding-top: 0;
+          padding: 0 10px 10px 10px;
+          @include laptop {
+            padding-top: inherit;
+            padding-left: 0;
+            padding-right: 0;
+            cursor: pointer;
+            
+          }
 
           label {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
             align-items: flex-end;
+            cursor: pointer;
+            @include laptop {
+              justify-content: space-evenly;
+              align-items: inherit;
+            }
           }
           p,
           .arrow {
@@ -116,6 +139,15 @@
     overflow: hidden;
     max-height: 0;
     transition: max-height 0.75s ease;
+    @include laptop {
+      display: none;
+      position: absolute;
+      background: #ffffff;
+      overflow: visible;
+      padding:10px;
+      margin-top:10px;
+      box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    }
   }
   .overlay {
     background: rgba(19, 39, 57, 0.8);
@@ -126,13 +158,13 @@
     height: 100%;
     z-index: 910;
     display: none;
-    @include laptop{
+    @include laptop {
       background: none;
     }
   }
 }
-.header-container > label > .hamburguesa{
-  @include laptop{
+.header-container > label > .hamburguesa {
+  @include laptop {
     display: none;
   }
 }
@@ -156,7 +188,7 @@
 #check-box:checked ~ .header-container > label > .cross {
   display: flex;
   z-index: 914;
-  @include laptop{
+  @include laptop {
     display: none;
   }
 }
@@ -167,8 +199,30 @@
 
 #downarrow:checked + div {
   max-height: 500px; /* "auto" */
+  display: flex;
+}
+
+#downarrow:checked + div {
+  max-height: 500px; /* "auto" */
+  display: flex;
 }
 
 #downarrow2:checked + div {
   max-height: 500px; /* "auto" */
+  display: flex;
+}
+
+@include laptop {
+  #header .dropdown-content > .dropdown > .dropdown-content {
+    position:absolute;
+    left:135px;
+    top:44;
+   
+  }
+}
+
+@include laptop{
+  .side-menu > *{
+    margin:0 20px;
+  }
 }
