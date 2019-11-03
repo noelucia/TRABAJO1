@@ -13,6 +13,7 @@
   box-shadow: 0 20px 10px 0 rgba(122, 149, 221, 0.1);
   @include tablet {
     max-width: 40%;
+    // ESA!
     &:nth-child(odd) {
       margin-right: 15px;
     }

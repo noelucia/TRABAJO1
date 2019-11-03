@@ -145,6 +145,7 @@
 
 .pie-pagina {
   background-color: #00458f;
+  // Este blanco se repite mucho a lo largo de los estilos, podria ser una variable
   color: #ffffff;
   .parte-superior {
     padding: $padding-general;

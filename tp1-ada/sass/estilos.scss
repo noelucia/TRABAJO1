@@ -12,7 +12,11 @@
 @import "components/card";
 @import "components/cards2";
 @import"common/mixins";
-
+/*
+  Borrar los estilos.css y estilos.css.map y el archivo que se llama estilos de la carpeta de sass.
+  Además, si muevo el archivo de mixins justo después de variables, todo el resto de los archivos pueden acceder a esos mixins
+  sin necesidad de importarlo cada vez.
+*/
 body, html {
   margin: 0;
   padding: 0;

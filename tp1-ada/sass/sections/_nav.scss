@@ -228,6 +228,8 @@
 }
 
 @include laptop {
+  // Este asterisco no esta bien. No deberian usar asterisco, sino determinar que elementos 
+  // voy a tener aca y destacarlos (.side-menu > div, .side-menu > span, etc...)
   .side-menu > * {
     margin: 0 20px;
   }
