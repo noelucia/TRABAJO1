@@ -1,4 +1,9 @@
 @import "../common/mixins";
+/*
+  No deberían haber dos componentes de cards. Debería haber uno y cada modificación particular, debería hacerse con clases
+  extra. De esta forma compartimos los detalles. Supongamos que comparto paddings y margenes, pero después pongo .card-blue
+  para el background-color. Entonces mi .cardb no existiría, tendria class="card card-blue" 
+*/
 .cardb {
   background-color: #00458f;
   padding: 20px;
